@@ -9,6 +9,7 @@ namespace PacEngine.board.tiles
 
         public Vector Position { get; private set; }
         public Dictionary<Vector, AbstractBoardTile> DirectionNeighbor { get; private set; } = new Dictionary<Vector, AbstractBoardTile>();
+        public virtual List<Vector> AvailableDirectionsToWalk { get; private set; } = new List<Vector>();
 
         public AbstractBoardTile(Vector position)
         {
@@ -28,8 +29,11 @@ namespace PacEngine.board.tiles
             {
                 var neighborPosition = new Vector(Position.x, Position.y) + direction;
 
-                if (board.GetTileAt(neighborPosition, out var element))
+                if (board.TryGetTileAt(neighborPosition, out var element))
                     DirectionNeighbor.Add(direction, element);
+
+                if (element is WalkableBoardTile)
+                    AvailableDirectionsToWalk.Add(direction);
             }
         }
 

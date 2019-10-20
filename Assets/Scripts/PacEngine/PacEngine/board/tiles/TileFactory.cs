@@ -1,4 +1,5 @@
-﻿using PacEngine.board.prizes;
+﻿using System.Collections.Generic;
+using PacEngine.board.prizes;
 using PacEngine.utils;
 
 namespace PacEngine.board.tiles
@@ -25,7 +26,7 @@ namespace PacEngine.board.tiles
             switch(info.TileType)
             {
                 case TileTypes.WALKABLE:
-                    return new WalkableBoardTile(info.Position, PrizeFactory.GetPrize(info.PrizeType));
+                    return new WalkableBoardTile(info.Position, PrizeFactory.GetPrize(info.PrizeType), new List<Vector>());
                 case TileTypes.BLOCKER:
                     return new BlockerBoardTile(info.Position);
                 case TileTypes.SIDE_TELEPORT:

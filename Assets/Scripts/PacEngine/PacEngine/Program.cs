@@ -1,10 +1,20 @@
 ﻿using System;
+using System.Collections.Generic;
 using PacEngine.board;
+using PacEngine.utils;
 
 namespace PacEngine
 {
     class MainClass
     {
+        private static Dictionary<string, Vector> keyToDir = new Dictionary<string, Vector>
+        {
+            { "w", Vector.UP },
+            { "a", Vector.LEFT },
+            { "s", Vector.DOWN },
+            { "d", Vector.RIGHT }
+        };
+
         public static void Main(string[] args)
         {
             //27x31 => 29 x 33
@@ -45,7 +55,18 @@ namespace PacEngine
                 new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
             };
 
-            var board = new Board(boardTiles);
+            PacEngine.Instance.InitiateGame(boardTiles, new Vector(24, 15));
+
+            Console.Write(PacEngine.Instance.Board);
+
+            while (true)
+            {
+                var k = Console.ReadLine();
+                PacEngine.Instance.Pacman.Move(keyToDir[k]);
+
+                Console.Write(PacEngine.Instance.Board);
+            }
+
         }
     }
 }

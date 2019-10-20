@@ -1,4 +1,5 @@
-﻿using PacEngine.utils;
+﻿using System.Collections.Generic;
+using PacEngine.utils;
 
 namespace PacEngine.board.tiles
 {
@@ -6,7 +7,7 @@ namespace PacEngine.board.tiles
     {
         public Vector DestinationOnStep { get; private set; }
 
-        public SideTeleportBoardTile(Vector position, Vector destinationOnStep) : base (position, null)
+        public SideTeleportBoardTile(Vector position, Vector destinationOnStep) : base (position, null, new List<Vector>())
         {
             DestinationOnStep = destinationOnStep;
         }

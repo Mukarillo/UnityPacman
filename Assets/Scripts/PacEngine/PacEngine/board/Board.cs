@@ -6,6 +6,7 @@ namespace PacEngine.board
     public class Board
     {
         public AbstractBoardTile[][] Tiles { get; private set; }
+        private Vector target = new Vector(30, 27);
 
         public Board(int[][] boardTilesIds)
         {
@@ -32,13 +33,11 @@ namespace PacEngine.board
                     Tiles[x][y].ResolveNeighbors(this);
                 }
             }
-
-            System.Console.WriteLine(LogBoard());
         }
 
         public override string ToString() => LogBoard();
 
-        public bool GetTileAt(Vector position, out AbstractBoardTile element)
+        public bool TryGetTileAt(Vector position, out AbstractBoardTile element)
         {
             element = null;
             if (!InBounds(position))
@@ -46,6 +45,14 @@ namespace PacEngine.board
 
             element = Tiles[position.x][position.y];
             return true;
+        }
+
+        public AbstractBoardTile GetTileAt(Vector position)
+        {
+            if (!InBounds(position))
+                throw new PacException($"Please make sure that position {position} is in map bounds. If you are not sure, use TryGetTileAt method instead");
+
+            return Tiles[position.x][position.y];
         }
 
         private bool InBounds(Vector position)
@@ -62,7 +69,10 @@ namespace PacEngine.board
             {
                 for (int y = 0; y < Tiles[x].Length; y++)
                 {
-                    str += Tiles[x][y];
+                    if (x == PacEngine.Instance.Pacman.Position.x && y == PacEngine.Instance.Pacman.Position.y)
+                        str += "p";
+                    else
+                        str += Tiles[x][y];
                 }
                 str += "\n";
             }

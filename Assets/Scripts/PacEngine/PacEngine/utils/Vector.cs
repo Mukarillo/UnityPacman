@@ -1,12 +1,18 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace PacEngine.utils
 {
-    public class Vector
+    public struct Vector
     {
         public static Vector UP => new Vector(0, 1);
         public static Vector DOWN => -UP;
         public static Vector RIGHT => new Vector(1, 0);
         public static Vector LEFT => -RIGHT;
+        public static List<Vector> ALL_DIRECTIONS = new List<Vector>
+        {
+            UP, LEFT, DOWN, RIGHT
+        };
 
         public int x { get; set; }
         public int y { get; set; }
