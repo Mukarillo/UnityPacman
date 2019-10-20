@@ -33,8 +33,8 @@ namespace PacEngine.board
 
         internal Vector ToBounds(Vector vector)
         {
-            var x = MathUtils.Clamp(vector.x, 0, Tiles.Length);
-            var newVector = new Vector(x, MathUtils.Clamp(vector.y, 0, Tiles[x].Length));
+            var x = MathUtils.Clamp(vector.x, 0, Tiles.Length - 1);
+            var newVector = new Vector(x, MathUtils.Clamp(vector.y, 0, Tiles[x].Length - 1));
 
             return newVector;
         }
@@ -65,7 +65,7 @@ namespace PacEngine.board
                     position.y >= 0 && position.y < Tiles[position.x].Length;
         }
 
-        private string LogBoard()
+        public string LogBoard(Vector pos = new Vector())
         {
             var str = "";
 
@@ -73,17 +73,20 @@ namespace PacEngine.board
             {
                 for (int y = 0; y < Tiles[x].Length; y++)
                 {
-                    if (PacEngine.Instance.Pacman.Position.Compare(new Vector(x, y)))
+                    var cPos = new Vector(x, y);
+                    if (pos.Compare(cPos))
+                        str += "H";
+                    else if (PacEngine.Instance.Pacman.Position.Compare(cPos))
                         str += "u";
                     else if (x == SpawnRoomPosition.x && y == SpawnRoomPosition.y)
                         str += "s";
-                    else if (PacEngine.Instance.Blinky.Position.Compare(new Vector(x, y)))
+                    else if (PacEngine.Instance.Blinky.Position.Compare(cPos))
                         str += "b";
-                    else if (PacEngine.Instance.Clyde.Position.Compare(new Vector(x, y)))
+                    else if (PacEngine.Instance.Clyde.Position.Compare(cPos))
                         str += "c";
-                    else if (PacEngine.Instance.Inky.Position.Compare(new Vector(x, y)))
+                    else if (PacEngine.Instance.Inky.Position.Compare(cPos))
                         str += "i";
-                    else if (PacEngine.Instance.Pinky.Position.Compare(new Vector(x, y)))
+                    else if (PacEngine.Instance.Pinky.Position.Compare(cPos))
                         str += "p";
                     else
                         str += Tiles[x][y];

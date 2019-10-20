@@ -16,7 +16,7 @@ namespace PacEngine.characters.ghosts
             FRIGHTENED
         }
 
-        public GhostState State { get; private set; } = GhostState.SCATTER;
+        public GhostState State { get; private set; } = GhostState.CHASE;
 
         protected abstract Vector ScatterPosition { get; }
 
@@ -42,13 +42,13 @@ namespace PacEngine.characters.ghosts
 
         public void Frightened()
         {
-            LastMoveDirection = -LastMoveDirection;
+            TurnAround();
             ChangeState(GhostState.FRIGHTENED);
         }
 
         public void Chase()
         {
-            LastMoveDirection = -LastMoveDirection;
+            TurnAround();
             ChangeState(GhostState.CHASE);
         }
 
@@ -68,6 +68,12 @@ namespace PacEngine.characters.ghosts
         {
             var p = CurrentTile.AvailableDirectionsToWalk.Except(((WalkableBoardTile)CurrentTile).ForbiddenMovementDirections).ToList();
             p.Remove(-LastMoveDirection);
+
+            //If there are no options, the ghost is in the edge of the screen, so we force to walk towards the
+            //void, so he can teleport to the other side of the board.
+            if (p.Count == 0)
+                p.Add(LastMoveDirection);
+
             return p;
         }
 
@@ -87,6 +93,11 @@ namespace PacEngine.characters.ghosts
         protected void ChangeState(GhostState state)
         {
             State = state;
+        }
+
+        protected void TurnAround()
+        {
+            LastMoveDirection = -LastMoveDirection;
         }
     }
 }
