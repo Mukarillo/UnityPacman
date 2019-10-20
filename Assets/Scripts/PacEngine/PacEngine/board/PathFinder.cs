@@ -5,7 +5,7 @@ namespace PacEngine.board
 {
     public class PathFinder
     {
-        public static Vector GetNextMove(Vector from, Vector to, Board board, List<Vector> availableDirections)
+        public static Vector GetNextMove(Vector from, Vector to, List<Vector> availableDirections)
         {
             var minDist = int.MaxValue;
             Vector direction = new Vector();
@@ -13,7 +13,7 @@ namespace PacEngine.board
             {
                 var nPos = new Vector(from.x + dir.x, from.y + dir.y);
                 var distance = GetDistance(nPos, to);
-                if (!(distance < minDist))
+                if (!(distance <= minDist))
                     continue;
 
                 minDist = distance;

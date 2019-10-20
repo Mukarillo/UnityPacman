@@ -4,12 +4,11 @@ using PacEngine.utils;
 
 namespace PacEngine.board.tiles
 {
-    internal class TileInfo
+    public class TileInfo
     {
-        public Vector Position { get; set; }
         public TileFactory.TileTypes TileType { get; set; }
         public PrizeFactory.PrizeTypes PrizeType { get; set; }
-        public Vector DestinationOnStep { get; set; }
+        public List<Vector> ForbiddenMovement { get; set; }
     }
 
     public class TileFactory
@@ -17,20 +16,17 @@ namespace PacEngine.board.tiles
         public enum TileTypes
         {
             WALKABLE,
-            BLOCKER,
-            SIDE_TELEPORT
+            BLOCKER
         }
 
-        internal static AbstractBoardTile GetTile(TileInfo info)
+        internal static AbstractBoardTile GetTile(TileInfo info, Vector position)
         {
             switch(info.TileType)
             {
                 case TileTypes.WALKABLE:
-                    return new WalkableBoardTile(info.Position, PrizeFactory.GetPrize(info.PrizeType), new List<Vector>());
+                    return new WalkableBoardTile(position, PrizeFactory.GetPrize(info.PrizeType), info.ForbiddenMovement);
                 case TileTypes.BLOCKER:
-                    return new BlockerBoardTile(info.Position);
-                case TileTypes.SIDE_TELEPORT:
-                    return new SideTeleportBoardTile(info.Position, info.DestinationOnStep);
+                    return new BlockerBoardTile(position);
             }
 
             throw new PacException($"Tile of type {info.TileType} is not implemented in TileFactory.GetTile");

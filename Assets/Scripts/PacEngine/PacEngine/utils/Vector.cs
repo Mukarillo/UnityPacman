@@ -5,9 +5,9 @@ namespace PacEngine.utils
 {
     public struct Vector
     {
-        public static Vector UP => new Vector(0, 1);
+        public static Vector UP => new Vector(-1, 0);
         public static Vector DOWN => -UP;
-        public static Vector RIGHT => new Vector(1, 0);
+        public static Vector RIGHT => new Vector(0, 1);
         public static Vector LEFT => -RIGHT;
         public static List<Vector> ALL_DIRECTIONS = new List<Vector>
         {
@@ -37,6 +37,16 @@ namespace PacEngine.utils
             y /= Magnitude;
         }
 
+        public bool Compare(Vector other)
+        {
+            return other.x == x && other.y == y;
+        }
+
+        public static bool Compare (Vector a, Vector b)
+        {
+            return a.Compare(b);
+        }
+
         public static Vector operator -(Vector a)
         {
             a.x = -a.x;
@@ -46,26 +56,17 @@ namespace PacEngine.utils
 
         public static Vector operator -(Vector a, Vector b)
         {
-            a.x -= b.x;
-            a.y -= b.y;
-
-            return a;
+            return new Vector(a.x - b.x, a.y - b.y);
         }
 
         public static Vector operator +(Vector a, Vector b)
         {
-            a.x += b.x;
-            a.y += b.y;
-
-            return a;
+            return new Vector(a.x + b.x, a.y + b.y);
         }
 
         public static Vector operator *(Vector a, int multipier)
         {
-            a.x *= multipier;
-            a.y *= multipier;
-
-            return a;
+            return new Vector(a.x * multipier, a.y *multipier);
         }
     }
 }

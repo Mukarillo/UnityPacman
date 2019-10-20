@@ -7,29 +7,47 @@ namespace PacEngine.characters
     public abstract class AbstractCharacter
     {
         public Vector Position { get; private set; }
-        public AbstractBoardTile CurrentTile => board.GetTileAt(Position);
+        public AbstractBoardTile CurrentTile => Board.GetTileAt(Position);
+        public Vector HeadingDirection => LastMoveDirection;
 
-        protected Board board { get; private set; }
-        protected Vector lastMoveDirection { get; private set; }
+        protected Board Board { get; private set; }
+        protected Vector LastMoveDirection { get; set; }
 
-        public AbstractCharacter(Vector initialPosition, Board board)
+        protected AbstractCharacter(Vector initialPosition, Board board)
         {
             Position = initialPosition;
-            this.board = board;
+            this.Board = board;
+
+            LastMoveDirection = Vector.DOWN;
         }
 
         public virtual bool Move(Vector direction)
         {
             Position += direction;
-            if(board.TryGetTileAt(Position, out var tile))
+            if(Board.TryGetTileAt(Position, out var tile))
             {
+                if (tile is BlockerBoardTile)
+                {
+                    Position -= direction;
+                    return false;
+                }
+
                 OnTileArrive(tile);
-                lastMoveDirection = direction;
+                LastMoveDirection = direction;
                 return true;
             }
 
-            Position -= direction;
+            //Character reached the edges of the board, wrap the position
+            var x = Position.x < 0 ? Board.Tiles.Length - 1 : Position.x >= Board.Tiles.Length ? 0 : Position.x;
+            var y = Position.y < 0 ? Board.Tiles[x].Length - 1 : Position.y >= Board.Tiles[x].Length ? 0 : Position.y;
+
+            Teleport(new Vector(x, y));
             return false;
+        }
+
+        private void Teleport(Vector position)
+        {
+            Position = position;
         }
 
         protected virtual void OnTileArrive(AbstractBoardTile tile)

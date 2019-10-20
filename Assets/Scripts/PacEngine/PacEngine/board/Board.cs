@@ -6,33 +6,37 @@ namespace PacEngine.board
     public class Board
     {
         public AbstractBoardTile[][] Tiles { get; private set; }
-        private Vector target = new Vector(30, 27);
+        public Vector SpawnRoomPosition { get; private set; }
 
-        public Board(int[][] boardTilesIds)
+        public Board(TileInfo[][] boardTilesInfo, Vector spawnRoomPosition)
         {
-            Tiles = new AbstractBoardTile[boardTilesIds.Length][];
-            for (int x = 0; x < boardTilesIds.Length; x++)
+            SpawnRoomPosition = spawnRoomPosition;
+
+            Tiles = new AbstractBoardTile[boardTilesInfo.Length][];
+            for (int x = 0; x < boardTilesInfo.Length; x++)
             {
-                Tiles[x] = new AbstractBoardTile[boardTilesIds[x].Length];
-                for (int y = 0; y < boardTilesIds[x].Length; y++)
+                Tiles[x] = new AbstractBoardTile[boardTilesInfo[x].Length];
+                for (int y = 0; y < boardTilesInfo[x].Length; y++)
                 {
-                    var info = new TileInfo
-                    {
-                        Position = new Vector(x, y),
-                        TileType = (TileFactory.TileTypes)boardTilesIds[x][y],
-                        PrizeType = prizes.PrizeFactory.PrizeTypes.NONE
-                    };
-                    Tiles[x][y] = TileFactory.GetTile(info);
+                    Tiles[x][y] = TileFactory.GetTile(boardTilesInfo[x][y], new Vector(x, y));
                 }
             }
 
-            for (int x = 0; x < boardTilesIds.Length; x++)
+            for (int x = 0; x < boardTilesInfo.Length; x++)
             {
-                for (int y = 0; y < boardTilesIds[x].Length; y++)
+                for (int y = 0; y < boardTilesInfo[x].Length; y++)
                 {
                     Tiles[x][y].ResolveNeighbors(this);
                 }
             }
+        }
+
+        internal Vector ToBounds(Vector vector)
+        {
+            var x = MathUtils.Clamp(vector.x, 0, Tiles.Length);
+            var newVector = new Vector(x, MathUtils.Clamp(vector.y, 0, Tiles[x].Length));
+
+            return newVector;
         }
 
         public override string ToString() => LogBoard();
@@ -69,7 +73,17 @@ namespace PacEngine.board
             {
                 for (int y = 0; y < Tiles[x].Length; y++)
                 {
-                    if (x == PacEngine.Instance.Pacman.Position.x && y == PacEngine.Instance.Pacman.Position.y)
+                    if (PacEngine.Instance.Pacman.Position.Compare(new Vector(x, y)))
+                        str += "u";
+                    else if (x == SpawnRoomPosition.x && y == SpawnRoomPosition.y)
+                        str += "s";
+                    else if (PacEngine.Instance.Blinky.Position.Compare(new Vector(x, y)))
+                        str += "b";
+                    else if (PacEngine.Instance.Clyde.Position.Compare(new Vector(x, y)))
+                        str += "c";
+                    else if (PacEngine.Instance.Inky.Position.Compare(new Vector(x, y)))
+                        str += "i";
+                    else if (PacEngine.Instance.Pinky.Position.Compare(new Vector(x, y)))
                         str += "p";
                     else
                         str += Tiles[x][y];
