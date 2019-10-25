@@ -7,10 +7,10 @@ using PacEngine.utils;
 
 namespace PacEngine
 {
-    public class PacEngine
+    public class PacmanEngine
     {
-        private static PacEngine instance;
-        public static PacEngine Instance => instance ?? (instance = new PacEngine());
+        private static PacmanEngine instance;
+        public static PacmanEngine Instance => instance ?? (instance = new PacmanEngine());
 
         public bool UseBuggedVersion => true;
         public Board Board { get; private set; }
@@ -28,10 +28,6 @@ namespace PacEngine
             Inky,
             Clyde
         };
-
-        public PacEngine()
-        {
-        }
 
         public void InitiateGame(TileInfo[][] boardTiles, Vector pacmanPosition, Vector ghostSpawnPosition)
         {

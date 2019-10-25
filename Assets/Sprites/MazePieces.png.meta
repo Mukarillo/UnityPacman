@@ -401,6 +401,9 @@ TextureImporter:
   - first:
       213: -2020586896721610739
     second: black
+  - first:
+      213: -7282912823437880877
+    second: MazePieces_0
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -3253,7 +3256,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3274,7 +3277,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3282,6 +3285,27 @@ TextureImporter:
       bones: []
       spriteID: 72284f286b9f241d2aa5f3f3bb500af4
       internalID: -2020586896721610739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MazePieces_0
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 54
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d054d23e1d9d498eab48de2cc2ba2b8
+      internalID: -7282912823437880877
       vertices: []
       indices: 
       edges: []

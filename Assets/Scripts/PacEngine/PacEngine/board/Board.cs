@@ -74,21 +74,21 @@ namespace PacEngine.board
                 for (int y = 0; y < Tiles[x].Length; y++)
                 {
                     var cPos = new Vector(x, y);
-                    if (pos.Compare(cPos))
-                        str += "H";
-                    else if (PacEngine.Instance.Pacman.Position.Compare(cPos))
-                        str += "u";
-                    else if (x == SpawnRoomPosition.x && y == SpawnRoomPosition.y)
-                        str += "s";
-                    else if (PacEngine.Instance.Blinky.Position.Compare(cPos))
-                        str += "b";
-                    else if (PacEngine.Instance.Clyde.Position.Compare(cPos))
-                        str += "c";
-                    else if (PacEngine.Instance.Inky.Position.Compare(cPos))
-                        str += "i";
-                    else if (PacEngine.Instance.Pinky.Position.Compare(cPos))
-                        str += "p";
-                    else
+                    //if (pos.Compare(cPos))
+                    //    str += "H";
+                    //else if (PacmanEngine.Instance.Pacman.Position.Compare(cPos))
+                    //    str += "u";
+                    //else if (x == SpawnRoomPosition.x && y == SpawnRoomPosition.y)
+                    //    str += "s";
+                    //else if (PacmanEngine.Instance.Blinky.Position.Compare(cPos))
+                    //    str += "b";
+                    //else if (PacmanEngine.Instance.Clyde.Position.Compare(cPos))
+                    //    str += "c";
+                    //else if (PacmanEngine.Instance.Inky.Position.Compare(cPos))
+                    //    str += "i";
+                    //else if (PacmanEngine.Instance.Pinky.Position.Compare(cPos))
+                    //    str += "p";
+                    //else
                         str += Tiles[x][y];
                 }
                 str += "\n";

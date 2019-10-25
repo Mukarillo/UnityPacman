@@ -16,11 +16,11 @@ namespace PacEngine.characters.ghosts
 
         protected override Vector GetChaseTarget()
         {
-            var midPoint = PacEngine.Instance.Pacman.Position + (PacEngine.Instance.Pacman.HeadingDirection * MID_POINT_MULTIPLIER);
-            if (PacEngine.Instance.UseBuggedVersion && PacEngine.Instance.Pacman.HeadingDirection.Compare(Vector.UP))
+            var midPoint = PacmanEngine.Instance.Pacman.Position + (PacmanEngine.Instance.Pacman.HeadingDirection * MID_POINT_MULTIPLIER);
+            if (PacmanEngine.Instance.UseBuggedVersion && PacmanEngine.Instance.Pacman.HeadingDirection.Compare(Vector.UP))
                 midPoint += Vector.LEFT * MID_POINT_MULTIPLIER;
 
-            var target = Board.ToBounds(midPoint + (PacEngine.Instance.Blinky.Position - midPoint));
+            var target = Board.ToBounds(midPoint + (PacmanEngine.Instance.Blinky.Position - midPoint));
 
             return target;
         }

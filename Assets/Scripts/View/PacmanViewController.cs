@@ -1,24 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
+using PacEngine;
 using PacEngine.board.prizes;
 using PacEngine.board.tiles;
 using PacEngine.utils;
+using UnityEngine;
 
-namespace PacEngine
+public class PacmanViewController : MonoBehaviour
 {
-    class MainClass
+    private Dictionary<KeyCode, Vector> keyToDir = new Dictionary<KeyCode, Vector>
     {
-        private static Dictionary<string, Vector> keyToDir = new Dictionary<string, Vector>
-        {
-            { "w", Vector.UP },
-            { "a", Vector.LEFT },
-            { "s", Vector.DOWN },
-            { "d", Vector.RIGHT }
-        };
+        { KeyCode.W, Vector.DOWN },
+        { KeyCode.A, Vector.LEFT },
+        { KeyCode.S, Vector.UP },
+        { KeyCode.D, Vector.RIGHT }
+    };
+        
+    public BoardView boardView;
 
-        public static void Main(string[] args)
-        {
-            var boardTiles = new TileInfo[][]
+    // Start is called before the first frame update
+    void Start()
+    {
+        var boardTiles = new TileInfo[][]
             {
                 new TileInfo[] { GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0) },
                 new TileInfo[] { GetInfo(0), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(0) },
@@ -49,8 +52,6 @@ namespace PacEngine
                 new TileInfo[] { GetInfo(0), GetInfo(1), GetInfo(0), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(0), GetInfo(1), GetInfo(1), GetInfo(0), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(0), GetInfo(1), GetInfo(1), GetInfo(0), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(0), GetInfo(1), GetInfo(0) },
                 new TileInfo[] { GetInfo(0), GetInfo(1), GetInfo(0), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(0), GetInfo(1), GetInfo(1), GetInfo(0), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(0), GetInfo(1), GetInfo(1), GetInfo(0), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(0), GetInfo(1), GetInfo(0) },
 
-                //new TileInfo[] { GetInfo(0), GetInfo(1), GetInfo(0), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(0), GetInfo(1), GetInfo(1), GetInfo(0), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(0), GetInfo(1), GetInfo(1), GetInfo(0), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(0), GetInfo(1), GetInfo(0) },
-
                 new TileInfo[] { GetInfo(0), GetInfo(1), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(1), GetInfo(0) },
                 new TileInfo[] { GetInfo(0), GetInfo(1), GetInfo(0), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(0), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(0), GetInfo(1), GetInfo(1), GetInfo(0), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(0), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(0), GetInfo(1), GetInfo(0) },
                 new TileInfo[] { GetInfo(0), GetInfo(1), GetInfo(0), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(0), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(0), GetInfo(1), GetInfo(1), GetInfo(0), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(0), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(1), GetInfo(0), GetInfo(1), GetInfo(0) },
@@ -60,26 +61,35 @@ namespace PacEngine
                 new TileInfo[] { GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0), GetInfo(0) },
             };
 
-            PacmanEngine.Instance.InitiateGame(boardTiles, new Vector(24, 15), new Vector(12, 14));
+        var pacPos = new Vector(8, 14);
+        var blinkPos = new Vector(20, 14);
+        PacmanEngine.Instance.InitiateGame(boardTiles, pacPos, blinkPos);
 
-            Console.Write(PacmanEngine.Instance.Board);
+        boardView.pacman.Move(pacPos);
+        boardView.blinky.Move(blinkPos);
+    }
 
-            while (true)
-            {
-                var k = Console.ReadLine();
-
-                if (keyToDir.TryGetValue(k, out var vector))
-                {
-                    PacmanEngine.Instance.Pacman.Move(vector);
-                    PacmanEngine.Instance.Ghosts.ForEach(x => x.DoDecision());
-                    Console.Write(PacmanEngine.Instance.Board);
-                }
-            }
-        }
-
-        private static TileInfo GetInfo(int id, int prize = 0, List<Vector> forbiddenMovement = null)
+    void Update()
+    {
+        foreach (var kvp in keyToDir)
         {
-            return new TileInfo { TileType = (TileFactory.TileTypes)id, PrizeType = (PrizeFactory.PrizeTypes)prize, ForbiddenMovement = forbiddenMovement };
+            if (Input.GetKeyDown(kvp.Key))
+                MovePacmanAndGhosts(kvp.Value);
         }
+    }
+
+    private void MovePacmanAndGhosts(Vector vector)
+    {
+        PacmanEngine.Instance.Pacman.Move(vector);
+        PacmanEngine.Instance.Ghosts.ForEach(x => x.DoDecision());
+
+        boardView.pacman.Move(PacmanEngine.Instance.Pacman.Position);
+        boardView.blinky.Move(PacmanEngine.Instance.Blinky.Position);
+
+    }
+
+    private static TileInfo GetInfo(int id, int prize = 0, List<Vector> forbiddenMovement = null)
+    {
+        return new TileInfo { TileType = (TileFactory.TileTypes)id, PrizeType = (PrizeFactory.PrizeTypes)prize, ForbiddenMovement = forbiddenMovement };
     }
 }

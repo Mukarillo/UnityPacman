@@ -266,6 +266,348 @@ TextureImporter:
   - first:
       213: 8908215424800718664
     second: PacmanGhostsItens_137
+  - first:
+      213: 142646996334421391
+    second: pac_right_0
+  - first:
+      213: 2941395965024520544
+    second: pac_right_1
+  - first:
+      213: 3447596079181240592
+    second: pac_dead_0
+  - first:
+      213: -5007625960300727721
+    second: pac_dead_1
+  - first:
+      213: -8164194223857982679
+    second: pac_dead_2
+  - first:
+      213: 6209560273479948917
+    second: pac_dead_3
+  - first:
+      213: 5548220695493606561
+    second: pac_dead_4
+  - first:
+      213: 6872113706626079002
+    second: pac_dead_5
+  - first:
+      213: -2672447176569732926
+    second: pac_dead_6
+  - first:
+      213: -5943388921351893308
+    second: pac_dead_7
+  - first:
+      213: 6023847092408414957
+    second: pac_dead_8
+  - first:
+      213: -8789769336284477171
+    second: pac_dead_9
+  - first:
+      213: -8409935100044412442
+    second: pac_dead_10
+  - first:
+      213: -1671190746577993348
+    second: pac_dead_11
+  - first:
+      213: -2271118557516412720
+    second: pac_left_0
+  - first:
+      213: 7113066113693401909
+    second: pac_left_1
+  - first:
+      213: 3045153268399482298
+    second: PacmanGhostsItens_16
+  - first:
+      213: 3651737413708344276
+    second: PacmanGhostsItens_17
+  - first:
+      213: -4701546900833543054
+    second: PacmanGhostsItens_18
+  - first:
+      213: -6001010318499730545
+    second: PacmanGhostsItens_19
+  - first:
+      213: -5264827582675873336
+    second: PacmanGhostsItens_20
+  - first:
+      213: 524457518175520065
+    second: PacmanGhostsItens_21
+  - first:
+      213: 789574274052130993
+    second: PacmanGhostsItens_23
+  - first:
+      213: -9038545627075460397
+    second: PacmanGhostsItens_24
+  - first:
+      213: -4209733920259717629
+    second: PacmanGhostsItens_25
+  - first:
+      213: -316916298954140375
+    second: PacmanGhostsItens_26
+  - first:
+      213: -2805678733019779124
+    second: PacmanGhostsItens_27
+  - first:
+      213: -677774270480039598
+    second: pac_up_0
+  - first:
+      213: -8109607606524152133
+    second: pac_up_1
+  - first:
+      213: 5718652613218737665
+    second: PacmanGhostsItens_30
+  - first:
+      213: -1863109078363721193
+    second: PacmanGhostsItens_31
+  - first:
+      213: -1973840820310578704
+    second: PacmanGhostsItens_32
+  - first:
+      213: -2684992879894596502
+    second: PacmanGhostsItens_33
+  - first:
+      213: -2672496116591647678
+    second: PacmanGhostsItens_34
+  - first:
+      213: 6102728480789369385
+    second: PacmanGhostsItens_35
+  - first:
+      213: 4687596156227699834
+    second: PacmanGhostsItens_36
+  - first:
+      213: 6373014771142584790
+    second: PacmanGhostsItens_37
+  - first:
+      213: -2849618851333848678
+    second: PacmanGhostsItens_38
+  - first:
+      213: 5630839776335893743
+    second: PacmanGhostsItens_39
+  - first:
+      213: 609984894141970461
+    second: PacmanGhostsItens_40
+  - first:
+      213: -2200996910663195441
+    second: PacmanGhostsItens_41
+  - first:
+      213: 5216586001169766055
+    second: pac_down_0
+  - first:
+      213: 1351834271930972958
+    second: pac_down_1
+  - first:
+      213: -4966918131580742356
+    second: PacmanGhostsItens_52
+  - first:
+      213: -4027017930927725489
+    second: PacmanGhostsItens_53
+  - first:
+      213: 852475883683440990
+    second: PacmanGhostsItens_54
+  - first:
+      213: 4066386092491194876
+    second: PacmanGhostsItens_55
+  - first:
+      213: 7188880101442322692
+    second: blinky_right_0
+  - first:
+      213: 5558740418872894155
+    second: blinky_right_1
+  - first:
+      213: 2735883320018317730
+    second: blinky_left_0
+  - first:
+      213: 1284778064178641397
+    second: blinky_left_1
+  - first:
+      213: 37422613159830360
+    second: blinky_up_0
+  - first:
+      213: 5608574570790319991
+    second: blinky_up_1
+  - first:
+      213: -3874836800426891693
+    second: blinky_down_0
+  - first:
+      213: 8035205733584779216
+    second: blinky_down_1
+  - first:
+      213: -7598730031708105460
+    second: PacmanGhostsItens_64
+  - first:
+      213: -458500975087364463
+    second: PacmanGhostsItens_65
+  - first:
+      213: -6737598495384594546
+    second: PacmanGhostsItens_66
+  - first:
+      213: 5542480048660600662
+    second: PacmanGhostsItens_67
+  - first:
+      213: 7596019103363385712
+    second: PacmanGhostsItens_68
+  - first:
+      213: -9106287613382484293
+    second: PacmanGhostsItens_69
+  - first:
+      213: -2605494169672065931
+    second: PacmanGhostsItens_70
+  - first:
+      213: 5496217180617316599
+    second: PacmanGhostsItens_71
+  - first:
+      213: -7990503706496253240
+    second: PacmanGhostsItens_72
+  - first:
+      213: -5563358289771654038
+    second: PacmanGhostsItens_73
+  - first:
+      213: 8112834101045329536
+    second: PacmanGhostsItens_74
+  - first:
+      213: 8312929243810008766
+    second: PacmanGhostsItens_76
+  - first:
+      213: -4566817632984478445
+    second: PacmanGhostsItens_77
+  - first:
+      213: -5098255299158540265
+    second: PacmanGhostsItens_78
+  - first:
+      213: -4961415465243555064
+    second: PacmanGhostsItens_79
+  - first:
+      213: 2703690379450099947
+    second: PacmanGhostsItens_80
+  - first:
+      213: -479152367196145800
+    second: PacmanGhostsItens_81
+  - first:
+      213: 2455817412332509212
+    second: PacmanGhostsItens_82
+  - first:
+      213: -3225339941229073369
+    second: PacmanGhostsItens_83
+  - first:
+      213: 6930503001570575490
+    second: PacmanGhostsItens_84
+  - first:
+      213: -6522608116201562693
+    second: PacmanGhostsItens_85
+  - first:
+      213: 986704138950831098
+    second: PacmanGhostsItens_86
+  - first:
+      213: 363148300133965221
+    second: PacmanGhostsItens_87
+  - first:
+      213: -894544792295954497
+    second: PacmanGhostsItens_88
+  - first:
+      213: 2465191341015201236
+    second: PacmanGhostsItens_89
+  - first:
+      213: -4507640124593167157
+    second: PacmanGhostsItens_90
+  - first:
+      213: 3033146652322442331
+    second: PacmanGhostsItens_91
+  - first:
+      213: 1824539685684121785
+    second: PacmanGhostsItens_97
+  - first:
+      213: 3707320718554909321
+    second: PacmanGhostsItens_98
+  - first:
+      213: -2059125313563396003
+    second: PacmanGhostsItens_99
+  - first:
+      213: -517044430876833482
+    second: PacmanGhostsItens_100
+  - first:
+      213: 8837469245230563991
+    second: PacmanGhostsItens_101
+  - first:
+      213: 5860589404515590315
+    second: PacmanGhostsItens_102
+  - first:
+      213: 9104603548866238830
+    second: PacmanGhostsItens_103
+  - first:
+      213: -6170907096212203250
+    second: PacmanGhostsItens_104
+  - first:
+      213: 695851763697886458
+    second: PacmanGhostsItens_105
+  - first:
+      213: 2888962797432100514
+    second: PacmanGhostsItens_110
+  - first:
+      213: 5397845256487963521
+    second: PacmanGhostsItens_111
+  - first:
+      213: 901479546759147933
+    second: PacmanGhostsItens_112
+  - first:
+      213: 4379775838224436193
+    second: PacmanGhostsItens_113
+  - first:
+      213: -3103158467836765948
+    second: PacmanGhostsItens_114
+  - first:
+      213: -5863066273440416091
+    second: PacmanGhostsItens_115
+  - first:
+      213: -4682173278494840863
+    second: PacmanGhostsItens_116
+  - first:
+      213: 8645181428302796884
+    second: PacmanGhostsItens_117
+  - first:
+      213: 7234709952335285779
+    second: PacmanGhostsItens_118
+  - first:
+      213: 6025544096776581135
+    second: PacmanGhostsItens_119
+  - first:
+      213: -4070741669027389264
+    second: PacmanGhostsItens_123
+  - first:
+      213: 4180764993522752126
+    second: PacmanGhostsItens_124
+  - first:
+      213: -1007037842383807588
+    second: PacmanGhostsItens_125
+  - first:
+      213: 8646308021436357585
+    second: PacmanGhostsItens_126
+  - first:
+      213: 1715232317317353226
+    second: PacmanGhostsItens_127
+  - first:
+      213: 8159138135963194258
+    second: PacmanGhostsItens_128
+  - first:
+      213: -2932171756869064312
+    second: PacmanGhostsItens_129
+  - first:
+      213: -2562713273610137252
+    second: PacmanGhostsItens_130
+  - first:
+      213: 8586537246407199966
+    second: PacmanGhostsItens_131
+  - first:
+      213: -5755225601433939760
+    second: PacmanGhostsItens_132
+  - first:
+      213: -1501734735701281366
+    second: PacmanGhostsItens_133
+  - first:
+      213: 5396875500750494759
+    second: PacmanGhostsItens_138
+  - first:
+      213: 6391456293950830112
+    second: PacmanGhostsItens_139
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -362,10 +704,10 @@ TextureImporter:
       name: pac_right_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 145
-        width: 14
-        height: 14
+        x: 0
+        y: 144
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -373,8 +715,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d14fb1a2b51384c5b93c60552ab6dfe9
-      internalID: -9031420688984902939
+      spriteID: 601922e52f8da413084dacfe07fac54e
+      internalID: 142646996334421391
       vertices: []
       indices: 
       edges: []
@@ -383,10 +725,10 @@ TextureImporter:
       name: pac_right_1
       rect:
         serializedVersion: 2
-        x: 17
-        y: 145
-        width: 14
-        height: 14
+        x: 16
+        y: 144
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -394,20 +736,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd0d5ee2a1d804244a2fe8266ab606aa
-      internalID: -8989337341381037479
+      spriteID: 6bcffe715a0b84a948c9063be80f8867
+      internalID: 2941395965024520544
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pac_die_0
+      name: pac_dead_0
       rect:
         serializedVersion: 2
-        x: 33
-        y: 145
-        width: 14
-        height: 14
+        x: 32
+        y: 144
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -415,20 +757,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc17dde4b5a74426d90b82df313d4e6c
-      internalID: 4979013122964213502
+      spriteID: 0807b00f9f16946d6b8167b8fd546b08
+      internalID: 3447596079181240592
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pac_die_1
+      name: pac_dead_1
       rect:
         serializedVersion: 2
-        x: 49
-        y: 145
-        width: 14
-        height: 14
+        x: 48
+        y: 144
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -436,20 +778,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6de6f9e22b9904ccb9b9c04d4ef9f518
-      internalID: -7903674579574523830
+      spriteID: 6a3dff062b1414b6e8cd401bbecf2a9f
+      internalID: -5007625960300727721
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pac_die_2
+      name: pac_dead_2
       rect:
         serializedVersion: 2
         x: 64
-        y: 145
-        width: 15
-        height: 14
+        y: 144
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -457,20 +799,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1dba44e7bbc643b7933aecba07e6f6e
-      internalID: 920599567230928912
+      spriteID: 4d9207fa01ece4e928d7b0f282bb77d7
+      internalID: -8164194223857982679
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pac_die_3
+      name: pac_dead_3
       rect:
         serializedVersion: 2
         x: 80
-        y: 145
-        width: 15
-        height: 14
+        y: 144
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -478,20 +820,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 558667a8ce6ca44deb11560c85422912
-      internalID: 6276111724683847530
+      spriteID: aac91aa64d1d844cd8018a85afe6de58
+      internalID: 6209560273479948917
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pac_die_4
+      name: pac_dead_4
       rect:
         serializedVersion: 2
         x: 96
-        y: 145
-        width: 15
-        height: 14
+        y: 144
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -499,20 +841,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d283197d6d1404e478710bd2ee2e3b75
-      internalID: -798063818679738041
+      spriteID: 67c16d47e886241a4b5b9d0536c7804b
+      internalID: 5548220695493606561
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pac_die_5
+      name: pac_dead_5
       rect:
         serializedVersion: 2
         x: 112
-        y: 145
-        width: 15
-        height: 14
+        y: 144
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -520,125 +862,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 301a36246644c4f5693fec400d65a52d
-      internalID: -5988267650502834817
+      spriteID: fa750a9d338f1448691cc9b459e30d23
+      internalID: 6872113706626079002
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pac_die_6
+      name: pac_dead_6
       rect:
         serializedVersion: 2
         x: 128
-        y: 145
-        width: 15
-        height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f5cfc8bc7bbf040c0825f184d3b31f03
-      internalID: -4075800488308949685
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pac_die_7
-      rect:
-        serializedVersion: 2
-        x: 145
-        y: 145
-        width: 14
-        height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c1dc9d4757ba14c7a91b7d3469598566
-      internalID: -2268005930622859896
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pac_die_8
-      rect:
-        serializedVersion: 2
-        x: 161
-        y: 145
-        width: 14
-        height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3f9b4e1f80a2444c588c7aaba18dd568
-      internalID: 6813603767489884180
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pac_die_9
-      rect:
-        serializedVersion: 2
-        x: 177
-        y: 145
-        width: 14
-        height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f0f9f673c799a44e884e3c737df75498
-      internalID: -3941669492260314001
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pac_die_10
-      rect:
-        serializedVersion: 2
-        x: 193
-        y: 145
-        width: 14
-        height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fdd43c96b57754ca0a642776c4e0fc9e
-      internalID: -2255615058322323003
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pac_die_11
-      rect:
-        serializedVersion: 2
-        x: 209
         y: 144
-        width: 14
-        height: 15
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -646,8 +883,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b76eec8a1dc54b648f4ea5d4e2a5c61
-      internalID: -2773619350857088257
+      spriteID: 257f8b7704aa84eaaae9c0c194ba73e8
+      internalID: -2672447176569732926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pac_dead_7
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cade890bb6dc74e74a9d8ff6a904c1e4
+      internalID: -5943388921351893308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pac_dead_8
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a04fadf5dacb2496b8285fb67af58767
+      internalID: 6023847092408414957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pac_dead_9
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22bde31f4f23d47e9868819cac5fcd2e
+      internalID: -8789769336284477171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pac_dead_10
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5d740741cdc944e596b28cc0564fda2
+      internalID: -8409935100044412442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pac_dead_11
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aee6c0c6df892441589fc509b8d64969
+      internalID: -1671190746577993348
       vertices: []
       indices: 
       edges: []
@@ -656,10 +998,10 @@ TextureImporter:
       name: pac_left_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 129
-        width: 14
-        height: 14
+        x: 0
+        y: 128
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -667,8 +1009,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72bac56ab8d3e4cdda1837e34f6fd1a8
-      internalID: -5333529051877964101
+      spriteID: 9d2503b8bcfb443a783fab4d81256195
+      internalID: -2271118557516412720
       vertices: []
       indices: 
       edges: []
@@ -677,10 +1019,10 @@ TextureImporter:
       name: pac_left_1
       rect:
         serializedVersion: 2
-        x: 17
-        y: 129
-        width: 14
-        height: 14
+        x: 16
+        y: 128
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -688,20 +1030,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e833bdb1f13d40b7b2be21e11b6eac7
-      internalID: 1807251059855734568
+      spriteID: 2f5f7c785a6af457f9c402af8833f110
+      internalID: 7113066113693401909
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: big_pac_0
+      name: PacmanGhostsItens_16
       rect:
         serializedVersion: 2
         x: 32
-        y: 112
-        width: 32
-        height: 32
+        y: 128
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -709,20 +1051,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a00c4a716f40438b81c66a0de1366fc
+      spriteID: a6b7a1e60cb654edba463ff736cfa970
       internalID: 3045153268399482298
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: big_pac_1
+      name: PacmanGhostsItens_17
       rect:
         serializedVersion: 2
-        x: 64
-        y: 112
-        width: 32
-        height: 32
+        x: 48
+        y: 128
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -730,20 +1072,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f74d428722034eb7b0ea95511e80e90
+      spriteID: 4f58f0d4e56524d6d95e632ea976d77e
+      internalID: 3651737413708344276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PacmanGhostsItens_18
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d79b37714b0fe408ba7cecd6c8da9cc4
       internalID: -4701546900833543054
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: big_pac_2
+      name: PacmanGhostsItens_19
       rect:
         serializedVersion: 2
-        x: 96
-        y: 112
-        width: 32
-        height: 32
+        x: 80
+        y: 128
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -751,8 +1114,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef8f9712d843448ebb3136692b84ceb7
+      spriteID: a51ed308722004d6eb4e18f81b65d75a
+      internalID: -6001010318499730545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PacmanGhostsItens_20
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de2d1741503bc45cd94fa9181c7cc525
       internalID: -5264827582675873336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PacmanGhostsItens_21
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9793c803ef5042fc831d9db653bc0c8
+      internalID: 524457518175520065
       vertices: []
       indices: 
       edges: []
@@ -761,10 +1166,10 @@ TextureImporter:
       name: PacmanGhostsItens_22
       rect:
         serializedVersion: 2
-        x: 129
-        y: 129
-        width: 14
-        height: 14
+        x: 128
+        y: 128
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -772,7 +1177,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76cc65e9bd01a48fcb9a1d1c82199f0e
+      spriteID: c084529f1692742c2a2d22960ed7d3f2
       internalID: 2527128085783708799
       vertices: []
       indices: 
@@ -782,10 +1187,10 @@ TextureImporter:
       name: pac_up_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 113
-        width: 14
-        height: 14
+        x: 0
+        y: 112
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -793,8 +1198,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 017245bba78ca472cb10c9c58feace02
-      internalID: -2651649619884235223
+      spriteID: d6dff787aefc4406f87db1e25f84b468
+      internalID: -677774270480039598
       vertices: []
       indices: 
       edges: []
@@ -803,10 +1208,10 @@ TextureImporter:
       name: pac_up_1
       rect:
         serializedVersion: 2
-        x: 17
-        y: 113
-        width: 14
-        height: 14
+        x: 16
+        y: 112
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -814,8 +1219,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88f4b21012acd424d8a5cdc046bafa44
-      internalID: 5910443010142111144
+      spriteID: 7dd3b67f667454ec492004f57aac7dc4
+      internalID: -8109607606524152133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PacmanGhostsItens_30
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f11e0962d3774eb484e55c7c1feed2f
+      internalID: 5718652613218737665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PacmanGhostsItens_31
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f24e7d7b368445a293bfe17a129ca2d
+      internalID: -1863109078363721193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PacmanGhostsItens_32
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c2f01f17506e414481ad22229f5fa53
+      internalID: -1973840820310578704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PacmanGhostsItens_33
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80d79c90471364b7fb94dc88d4e3b237
+      internalID: -2684992879894596502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PacmanGhostsItens_34
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51b3fac0a8ce74bd082aef430f7bd7cc
+      internalID: -2672496116591647678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PacmanGhostsItens_35
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3613015ab8c4a4d809ef73c7f548bf4c
+      internalID: 6102728480789369385
       vertices: []
       indices: 
       edges: []
@@ -824,10 +1355,10 @@ TextureImporter:
       name: pac_down_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 97
-        width: 14
-        height: 14
+        x: 0
+        y: 96
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -835,8 +1366,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a933ea4611cc4097bbbfbf5f27168d1
-      internalID: 7467466387504535323
+      spriteID: 186b7319994764d95aed0d20504fc62a
+      internalID: 5216586001169766055
       vertices: []
       indices: 
       edges: []
@@ -845,10 +1376,10 @@ TextureImporter:
       name: pac_down_1
       rect:
         serializedVersion: 2
-        x: 17
-        y: 97
-        width: 14
-        height: 14
+        x: 16
+        y: 96
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -856,8 +1387,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82669016b777348c981ba476db84d0b3
-      internalID: -7440583116600215888
+      spriteID: f5c19abc4ed664a8fb80c2930440aa51
+      internalID: 1351834271930972958
       vertices: []
       indices: 
       edges: []
@@ -866,10 +1397,10 @@ TextureImporter:
       name: PacmanGhostsItens_44
       rect:
         serializedVersion: 2
-        x: 33
-        y: 97
-        width: 14
-        height: 14
+        x: 32
+        y: 96
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -877,7 +1408,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b83c9dd108f284ab79da35056a1c66bb
+      spriteID: aa3dc1c0dcf1d4ac1b8c94754e0bb62a
       internalID: -8741345791060607267
       vertices: []
       indices: 
@@ -887,10 +1418,10 @@ TextureImporter:
       name: PacmanGhostsItens_45
       rect:
         serializedVersion: 2
-        x: 49
-        y: 97
-        width: 14
-        height: 14
+        x: 48
+        y: 96
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -898,7 +1429,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 540ab82355daa4cbf9045e4675c87072
+      spriteID: 8238d79b511e14d3986b54392517b167
       internalID: 5422921892997063687
       vertices: []
       indices: 
@@ -908,10 +1439,10 @@ TextureImporter:
       name: PacmanGhostsItens_46
       rect:
         serializedVersion: 2
-        x: 65
-        y: 97
-        width: 14
-        height: 14
+        x: 64
+        y: 96
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -919,7 +1450,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a731ac75dc2140d9aa8022473ff2039
+      spriteID: 6cda6d53e01e040428ac3b1d7bd71c7b
       internalID: -3251397095505144305
       vertices: []
       indices: 
@@ -929,10 +1460,10 @@ TextureImporter:
       name: PacmanGhostsItens_47
       rect:
         serializedVersion: 2
-        x: 81
-        y: 97
-        width: 14
-        height: 14
+        x: 80
+        y: 96
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -940,7 +1471,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd8ca6b9041954548a3c24babf94f8bd
+      spriteID: 256c1667f838e4ad2af91a4998586913
       internalID: 2784218080739715820
       vertices: []
       indices: 
@@ -950,10 +1481,10 @@ TextureImporter:
       name: PacmanGhostsItens_48
       rect:
         serializedVersion: 2
-        x: 97
-        y: 97
-        width: 14
-        height: 14
+        x: 96
+        y: 96
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -961,7 +1492,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04be92cabac7b450d81c7b8716fc1587
+      spriteID: 9bcd566cc76784113931c6a3af73851f
       internalID: 1717556725809973623
       vertices: []
       indices: 
@@ -971,10 +1502,10 @@ TextureImporter:
       name: PacmanGhostsItens_49
       rect:
         serializedVersion: 2
-        x: 113
-        y: 97
-        width: 14
-        height: 14
+        x: 112
+        y: 96
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -982,7 +1513,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80601e4edfe5e4d5f9f9ff57b028a02e
+      spriteID: 1bdcb6b8776c64a5bb91d86f01107d4f
       internalID: -4789492214040019123
       vertices: []
       indices: 
@@ -992,10 +1523,10 @@ TextureImporter:
       name: PacmanGhostsItens_50
       rect:
         serializedVersion: 2
-        x: 129
-        y: 97
-        width: 14
-        height: 14
+        x: 128
+        y: 96
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1003,7 +1534,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9cd3e6abe516d473cade6465243fd6f8
+      spriteID: 8779b76c27411498991a28117391ec8c
       internalID: 8502292226609243903
       vertices: []
       indices: 
@@ -1013,10 +1544,10 @@ TextureImporter:
       name: PacmanGhostsItens_51
       rect:
         serializedVersion: 2
-        x: 145
-        y: 97
-        width: 14
-        height: 14
+        x: 144
+        y: 96
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1024,20 +1555,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17d8a70af2a9c451cb18b2092774241e
+      spriteID: c0cbee948b7f64ed3966f79d27dd492d
       internalID: 8958549461300833094
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blink_right_0
+      name: blinky_right_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 81
-        width: 14
-        height: 14
+        x: 0
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1045,20 +1576,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c487a10e1fc9496f8307d2647ebdebb
+      spriteID: 0a6e5a16ba65548c9bc7fe38ed27e9c7
       internalID: 7188880101442322692
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blink_right_1
+      name: blinky_right_1
       rect:
         serializedVersion: 2
-        x: 17
-        y: 81
-        width: 14
-        height: 14
+        x: 16
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1066,20 +1597,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 017ac6f5b1f8d46b2a69b50a0116b668
+      spriteID: 8f472240b4ebb4b57b87485f78f96696
       internalID: 5558740418872894155
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blink_left_0
+      name: blinky_left_0
       rect:
         serializedVersion: 2
-        x: 33
-        y: 81
-        width: 14
-        height: 14
+        x: 32
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1087,20 +1618,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1b20791f071e48a287cc32f2d9fac73
+      spriteID: 1ba83a07b2ae6493e852133a7c7fe612
       internalID: 2735883320018317730
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blink_left_1
+      name: blinky_left_1
       rect:
         serializedVersion: 2
-        x: 49
-        y: 81
-        width: 14
-        height: 14
+        x: 48
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1108,20 +1639,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f93cb737ff964cc2b7bcf082738ed04
+      spriteID: 0e2a1d714073d4f148f1982e5ca6ea20
       internalID: 1284778064178641397
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blink_up_0
+      name: blinky_up_0
       rect:
         serializedVersion: 2
-        x: 65
-        y: 81
-        width: 14
-        height: 14
+        x: 64
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1129,20 +1660,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d7398f6fc7384ae9ad82e09aea04077
+      spriteID: 31e845d2bc5ef4b9ba06826312567ecf
       internalID: 37422613159830360
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blink_up_1
+      name: blinky_up_1
       rect:
         serializedVersion: 2
-        x: 81
-        y: 81
-        width: 14
-        height: 14
+        x: 80
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1150,20 +1681,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8cb48f8cac3bc40b9b3ba72adb879d84
+      spriteID: 2172595c531684c4aac9339d828a5ab8
       internalID: 5608574570790319991
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blink_down_0
+      name: blinky_down_0
       rect:
         serializedVersion: 2
-        x: 97
-        y: 81
-        width: 14
-        height: 14
+        x: 96
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1171,20 +1702,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e356c8c23767498da3338d8a5b58064
+      spriteID: 2c4786634c1b5456f8683d65499ccd72
       internalID: -3874836800426891693
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blink_down_1
+      name: blinky_down_1
       rect:
         serializedVersion: 2
-        x: 113
-        y: 81
-        width: 14
-        height: 14
+        x: 112
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1192,20 +1723,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 124d57c189f3b472da2b934196c11cdd
+      spriteID: 7946b319e620b49c095e1b52fea26c33
       internalID: 8035205733584779216
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: frightened_0
+      name: PacmanGhostsItens_64
       rect:
         serializedVersion: 2
-        x: 129
-        y: 81
-        width: 14
-        height: 14
+        x: 128
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1213,20 +1744,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c61f6e3201484dfc974a65ed0bfa7c6
+      spriteID: 62fd4a8ab1e2949c4b706defb706c668
       internalID: -7598730031708105460
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: frightened_1
+      name: PacmanGhostsItens_65
       rect:
         serializedVersion: 2
-        x: 145
-        y: 81
-        width: 14
-        height: 14
+        x: 144
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1234,20 +1765,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85708c96080a74537a75fb4e6f55f6d5
+      spriteID: cad2b9f292e244839b6c1361f283ab3b
       internalID: -458500975087364463
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: frightened_2
+      name: PacmanGhostsItens_66
       rect:
         serializedVersion: 2
-        x: 161
-        y: 81
-        width: 14
-        height: 14
+        x: 160
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1255,20 +1786,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90bd17657b89e42478e8d02d5260a57b
+      spriteID: f27cb8fc30e494b3cbeda017a35ab2ae
       internalID: -6737598495384594546
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: frightened_3
+      name: PacmanGhostsItens_67
       rect:
         serializedVersion: 2
-        x: 177
-        y: 81
-        width: 14
-        height: 14
+        x: 176
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1276,20 +1807,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61a4d6bc6abc9486c91b9a949abac1b8
+      spriteID: 51f74a28375a144c3a36b93e9a231493
       internalID: 5542480048660600662
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pinky_right_0
+      name: PacmanGhostsItens_70
       rect:
         serializedVersion: 2
-        x: 1
-        y: 65
-        width: 14
-        height: 14
+        x: 0
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1297,20 +1828,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 282a461aff1b3482996ac4e3d0912a1e
+      spriteID: 84de72891068a4f14b151ff6e64b9da2
       internalID: -2605494169672065931
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pinky_right_1
+      name: PacmanGhostsItens_71
       rect:
         serializedVersion: 2
-        x: 17
-        y: 65
-        width: 14
-        height: 14
+        x: 16
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1318,20 +1849,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0ca48fb80ed4464885d7d4ec38411f3
+      spriteID: 149ad69f6ccd84c50814a7f2d01da1bd
       internalID: 5496217180617316599
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pinky_left_0
+      name: PacmanGhostsItens_72
       rect:
         serializedVersion: 2
-        x: 33
-        y: 65
-        width: 14
-        height: 14
+        x: 32
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1339,20 +1870,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d025ce29153c14c09a89fe7eb69ba0b0
+      spriteID: 9cb038fac6a9c4609b476c3d545b2169
       internalID: -7990503706496253240
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pinky_left_1
+      name: PacmanGhostsItens_73
       rect:
         serializedVersion: 2
-        x: 49
-        y: 65
-        width: 14
-        height: 14
+        x: 48
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1360,20 +1891,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b1b4d2cd801141bfbbdc5bae78d6db7
+      spriteID: aedad4d0d7832428e9a3aea9a831d0db
       internalID: -5563358289771654038
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pinky_up_0
+      name: PacmanGhostsItens_74
       rect:
         serializedVersion: 2
-        x: 65
-        y: 65
-        width: 14
-        height: 14
+        x: 64
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1381,7 +1912,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d671492f10144e418fb59a739f52b7a
+      spriteID: 6187d814bd83043bc99ede35a416ef44
       internalID: 8112834101045329536
       vertices: []
       indices: 
@@ -1391,10 +1922,10 @@ TextureImporter:
       name: PacmanGhostsItens_75
       rect:
         serializedVersion: 2
-        x: 81
-        y: 65
-        width: 14
-        height: 14
+        x: 80
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1402,20 +1933,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14fde2c06adb947a48343ecdd17033f3
+      spriteID: b93bb4b7d560e44a2a85649552ad2682
       internalID: -3939734956110030623
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pinky_down_0
+      name: PacmanGhostsItens_76
       rect:
         serializedVersion: 2
-        x: 97
-        y: 65
-        width: 14
-        height: 14
+        x: 96
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1423,20 +1954,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 001243fdba65e46729d8004f04df73dc
+      spriteID: eb4c3e4bd4ac845daa2678e24c6aa993
       internalID: 8312929243810008766
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pinky_down_1
+      name: PacmanGhostsItens_77
       rect:
         serializedVersion: 2
-        x: 113
-        y: 65
-        width: 14
-        height: 14
+        x: 112
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1444,20 +1975,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4937a1e6871f847e09347cf1bd347f30
+      spriteID: 3ac6e6e6119f04251b91d10251f9a36c
       internalID: -4566817632984478445
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ghost_eaten_right
+      name: PacmanGhostsItens_78
       rect:
         serializedVersion: 2
-        x: 129
-        y: 65
-        width: 14
-        height: 14
+        x: 128
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1465,20 +1996,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f5621ad6f58b4e0e8b7bded2b8cd101
+      spriteID: e76f6535e05b04195a23d2d0b63b704c
       internalID: -5098255299158540265
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ghost_eaten_left
+      name: PacmanGhostsItens_79
       rect:
         serializedVersion: 2
-        x: 145
-        y: 65
-        width: 14
-        height: 14
+        x: 144
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1486,20 +2017,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0d239c01e7a245d89931f1f0ecc4686
+      spriteID: f4971cca5b8304ea9ba6085aabfe7e16
       internalID: -4961415465243555064
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ghost_eaten_up
+      name: PacmanGhostsItens_80
       rect:
         serializedVersion: 2
-        x: 161
-        y: 65
-        width: 14
-        height: 14
+        x: 160
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1507,20 +2038,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7661c17d7d81c4fe2b803cf6f08758f1
+      spriteID: 2389768ceb4dd4dc281bb3c0b89c0717
       internalID: 2703690379450099947
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ghost_eaten_down
+      name: PacmanGhostsItens_81
       rect:
         serializedVersion: 2
-        x: 177
-        y: 65
-        width: 14
-        height: 14
+        x: 176
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1528,20 +2059,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d69e8bcd1cb9244c5a304dc01940c933
+      spriteID: 3568b446ccbc246ac89da1352f8517bf
       internalID: -479152367196145800
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: inky_right_0
+      name: PacmanGhostsItens_84
       rect:
         serializedVersion: 2
-        x: 1
-        y: 49
-        width: 14
-        height: 14
+        x: 0
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1549,20 +2080,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 353f645e35c864b2dabb168aae80df1c
+      spriteID: 528b029c0f1dd4e87b2e990876296cee
       internalID: 6930503001570575490
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: inky_right_1
+      name: PacmanGhostsItens_85
       rect:
         serializedVersion: 2
-        x: 17
-        y: 49
-        width: 14
-        height: 14
+        x: 16
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1570,20 +2101,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3512a0ae547c243aea7c80a5f5ab4c58
+      spriteID: d605b595a12224f309fda04be17ac811
       internalID: -6522608116201562693
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: inky_left_0
+      name: PacmanGhostsItens_86
       rect:
         serializedVersion: 2
-        x: 33
-        y: 49
-        width: 14
-        height: 14
+        x: 32
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1591,20 +2122,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8eb114ac99034b9c8b5e37fcc434fd1
+      spriteID: ce8ace506e2f2417f801dd781c6c6fd0
       internalID: 986704138950831098
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: inky_left_1
+      name: PacmanGhostsItens_87
       rect:
         serializedVersion: 2
-        x: 49
-        y: 49
-        width: 14
-        height: 14
+        x: 48
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1612,20 +2143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19539fa7cb7954885a253ba38e25e38a
+      spriteID: 9104647f5e660447a9390c693d012c99
       internalID: 363148300133965221
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: inky_up_0
+      name: PacmanGhostsItens_88
       rect:
         serializedVersion: 2
-        x: 65
-        y: 49
-        width: 14
-        height: 14
+        x: 64
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1633,20 +2164,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6533d5fa25354af48e09b001e39cea0
+      spriteID: 4d92e52a09998437d8961f8e44034696
       internalID: -894544792295954497
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: inky_up_1
+      name: PacmanGhostsItens_89
       rect:
         serializedVersion: 2
-        x: 81
-        y: 49
-        width: 14
-        height: 14
+        x: 80
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1654,20 +2185,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ddaf0ea4997b4d3ea030afff26b2eca
+      spriteID: e7f62576d3cd74aa18f12b13be84b217
       internalID: 2465191341015201236
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: inky_down_0
+      name: PacmanGhostsItens_90
       rect:
         serializedVersion: 2
-        x: 97
-        y: 49
-        width: 14
-        height: 14
+        x: 96
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1675,20 +2206,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ec55c70613cd4223a51f8b3a3fa3bd8
+      spriteID: d1cc457e53974482796ace6fd0612844
       internalID: -4507640124593167157
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: inky_down_1
+      name: PacmanGhostsItens_91
       rect:
         serializedVersion: 2
-        x: 113
-        y: 49
-        width: 14
-        height: 14
+        x: 112
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1696,7 +2227,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f840f44d6e7c4ca89d83e88a04838cb
+      spriteID: a885f17dd46d043128ea34a2c35170eb
       internalID: 3033146652322442331
       vertices: []
       indices: 
@@ -1706,10 +2237,10 @@ TextureImporter:
       name: PacmanGhostsItens_92
       rect:
         serializedVersion: 2
-        x: 130
+        x: 128
         y: 48
-        width: 14
-        height: 14
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1717,7 +2248,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19066e2829e3b40368acea764a0d3aac
+      spriteID: 3c87634c6aa51455eba686876dead08b
       internalID: -4505612596475425813
       vertices: []
       indices: 
@@ -1727,10 +2258,10 @@ TextureImporter:
       name: PacmanGhostsItens_93
       rect:
         serializedVersion: 2
-        x: 146
+        x: 144
         y: 48
-        width: 14
-        height: 14
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1738,7 +2269,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3aedf5f9d61646858e8d39735acac45
+      spriteID: 40d87be0c48da434cbbcf172de128141
       internalID: -6150396167555303732
       vertices: []
       indices: 
@@ -1748,10 +2279,10 @@ TextureImporter:
       name: PacmanGhostsItens_94
       rect:
         serializedVersion: 2
-        x: 162
+        x: 160
         y: 48
-        width: 14
-        height: 14
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1759,7 +2290,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 911733755ef364deaabd65e0c62dd6e0
+      spriteID: 04526b7b58d21409693ec8e16ff396a2
       internalID: -2823550580090840008
       vertices: []
       indices: 
@@ -1769,10 +2300,10 @@ TextureImporter:
       name: PacmanGhostsItens_95
       rect:
         serializedVersion: 2
-        x: 178
+        x: 176
         y: 48
-        width: 14
-        height: 14
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1780,7 +2311,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 578506f5492d54fad85a7a13235bb6a6
+      spriteID: 291408e904b0447dea1c5802ea310bd8
       internalID: -6901875906752229028
       vertices: []
       indices: 
@@ -1790,10 +2321,10 @@ TextureImporter:
       name: PacmanGhostsItens_96
       rect:
         serializedVersion: 2
-        x: 194
+        x: 192
         y: 48
-        width: 14
-        height: 14
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1801,20 +2332,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a51166114009f4f2fbe04a8b378b8589
+      spriteID: ca0d6bccab3b346c0a32ed1cc7e04d95
       internalID: 1539902672187687230
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clyde_right_0
+      name: PacmanGhostsItens_98
       rect:
         serializedVersion: 2
-        x: 1
-        y: 33
-        width: 14
-        height: 14
+        x: 0
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1822,20 +2353,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54ea6edb214a841c8b8f4d5d655abe21
+      spriteID: 6ad42bcced95241afb1ccc935617ab41
       internalID: 3707320718554909321
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clyde_right_1
+      name: PacmanGhostsItens_99
       rect:
         serializedVersion: 2
-        x: 17
-        y: 33
-        width: 14
-        height: 14
+        x: 16
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1843,20 +2374,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae347eec42fe941b280b80fd0a6a5203
+      spriteID: 0289f746347134d6093074232cc23521
       internalID: -2059125313563396003
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clyde_left_0
+      name: PacmanGhostsItens_100
       rect:
         serializedVersion: 2
-        x: 33
-        y: 33
-        width: 14
-        height: 14
+        x: 32
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1864,20 +2395,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5233916e03f6b4c97b04bc274ae4e296
+      spriteID: a1ea0abffeee44724b82c60144497e88
       internalID: -517044430876833482
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clyde_left_1
+      name: PacmanGhostsItens_101
       rect:
         serializedVersion: 2
-        x: 49
-        y: 33
-        width: 14
-        height: 14
+        x: 48
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1885,20 +2416,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8146c68412b24068b6609bdfaf198f0
+      spriteID: caf6b2d45167e4685b8902d3039ce3f1
       internalID: 8837469245230563991
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clyde_up_0
+      name: PacmanGhostsItens_102
       rect:
         serializedVersion: 2
-        x: 65
-        y: 33
-        width: 14
-        height: 14
+        x: 64
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1906,20 +2437,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4aa36fe3beca74fefa801dcd9518213e
+      spriteID: 5a2108957cd804bb8a43d316f1214b50
       internalID: 5860589404515590315
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clyde_up_1
+      name: PacmanGhostsItens_103
       rect:
         serializedVersion: 2
-        x: 81
-        y: 33
-        width: 14
-        height: 14
+        x: 80
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1927,20 +2458,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 968332f0e9d5b4c2f9f7da11bba4da79
+      spriteID: 6f9ab9cd477f04550a1ccfa2c303a71e
       internalID: 9104603548866238830
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clyde_down_0
+      name: PacmanGhostsItens_104
       rect:
         serializedVersion: 2
-        x: 97
-        y: 33
-        width: 14
-        height: 14
+        x: 96
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1948,20 +2479,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4aaf3b54115e54d78950d4449771bd2a
+      spriteID: 622bd4147072345a7b99a43681a300ef
       internalID: -6170907096212203250
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clyde_down_1
+      name: PacmanGhostsItens_105
       rect:
         serializedVersion: 2
-        x: 113
-        y: 33
-        width: 14
-        height: 14
+        x: 112
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1969,7 +2500,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 063e49fbe08a341c8889776f7519a019
+      spriteID: e5387328cd6894c5dac8fe5ecb9e38e9
       internalID: 695851763697886458
       vertices: []
       indices: 
@@ -1979,10 +2510,10 @@ TextureImporter:
       name: PacmanGhostsItens_106
       rect:
         serializedVersion: 2
-        x: 129
-        y: 33
-        width: 14
-        height: 14
+        x: 128
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1990,7 +2521,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 935eae40d635d44c9ae50ee1f50ba3a7
+      spriteID: babd7f21138bd44918917e383717af19
       internalID: 7382619020406416030
       vertices: []
       indices: 
@@ -2000,10 +2531,10 @@ TextureImporter:
       name: PacmanGhostsItens_107
       rect:
         serializedVersion: 2
-        x: 145
-        y: 33
-        width: 14
-        height: 14
+        x: 144
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2011,7 +2542,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 217509757918c41cd848160783496c4b
+      spriteID: b396b4381072b4293877dba43cd0ac5d
       internalID: -7748017949024998919
       vertices: []
       indices: 
@@ -2021,10 +2552,10 @@ TextureImporter:
       name: PacmanGhostsItens_108
       rect:
         serializedVersion: 2
-        x: 161
-        y: 33
-        width: 14
-        height: 14
+        x: 160
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2032,7 +2563,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62391a5aee6f14e11b4b9bf3a7873710
+      spriteID: 6f4836515228841f8aad9524849b9159
       internalID: -3232415931356854919
       vertices: []
       indices: 
@@ -2042,10 +2573,10 @@ TextureImporter:
       name: PacmanGhostsItens_109
       rect:
         serializedVersion: 2
-        x: 177
-        y: 33
-        width: 14
-        height: 14
+        x: 176
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2053,7 +2584,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6741ad04baf0b4f1d8541f7f0042ee40
+      spriteID: 15bc931cf6d3c4b999b34b2bedc7b2a3
       internalID: -6271726260396974427
       vertices: []
       indices: 
@@ -2063,10 +2594,10 @@ TextureImporter:
       name: PacmanGhostsItens_120
       rect:
         serializedVersion: 2
-        x: 129
-        y: 17
-        width: 14
-        height: 14
+        x: 128
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2074,7 +2605,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53f914013b92c4c2ab06b8347b539954
+      spriteID: c8652e0fa61124569881864abf7ceaa7
       internalID: -7777952208976250171
       vertices: []
       indices: 
@@ -2084,10 +2615,10 @@ TextureImporter:
       name: PacmanGhostsItens_121
       rect:
         serializedVersion: 2
-        x: 145
-        y: 17
-        width: 14
-        height: 14
+        x: 144
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2095,7 +2626,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f26bf8073b8b94ff8af9f8656a5207b7
+      spriteID: 8734832062e2d49a6b2d6466131c78c4
       internalID: 6545060933136515275
       vertices: []
       indices: 
@@ -2105,10 +2636,10 @@ TextureImporter:
       name: PacmanGhostsItens_122
       rect:
         serializedVersion: 2
-        x: 161
-        y: 17
-        width: 30
-        height: 14
+        x: 160
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2116,8 +2647,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 893be37bfece74150ba5137a3e76bd79
+      spriteID: 6a16dbbe8dc6142b0ab5f59de809f5b1
       internalID: -4452688218917984911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PacmanGhostsItens_123
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9034f503593894661a52d3a0bd45a157
+      internalID: -4070741669027389264
       vertices: []
       indices: 
       edges: []
@@ -2126,10 +2678,10 @@ TextureImporter:
       name: PacmanGhostsItens_134
       rect:
         serializedVersion: 2
-        x: 129
-        y: 1
-        width: 14
-        height: 14
+        x: 128
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2137,7 +2689,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfc7bea156835437c83da1a89c1647d0
+      spriteID: bcfb8d047c7a74909a4273945ff77d0c
       internalID: 5022970637982090177
       vertices: []
       indices: 
@@ -2147,10 +2699,10 @@ TextureImporter:
       name: PacmanGhostsItens_135
       rect:
         serializedVersion: 2
-        x: 145
-        y: 1
-        width: 14
-        height: 14
+        x: 144
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2158,7 +2710,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29b9f90960a35485ca6f8caed6d2a935
+      spriteID: ab3f2cccc72034be4aff312f764be14d
       internalID: 5810289799267408589
       vertices: []
       indices: 
@@ -2168,10 +2720,10 @@ TextureImporter:
       name: PacmanGhostsItens_136
       rect:
         serializedVersion: 2
-        x: 161
-        y: 1
-        width: 14
-        height: 14
+        x: 160
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2179,7 +2731,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51e990aa8cb0c49b295214bed0f3146b
+      spriteID: bda28cecdd1e449119c2a637bb8c8ed9
       internalID: 2629666266126041698
       vertices: []
       indices: 
@@ -2189,10 +2741,10 @@ TextureImporter:
       name: PacmanGhostsItens_137
       rect:
         serializedVersion: 2
-        x: 177
-        y: 1
-        width: 14
-        height: 14
+        x: 176
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2200,7 +2752,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae0c9ccdfa0f34f5b8d19b368ece6007
+      spriteID: 5f93c8c95c18e4e3dbab788d0e5cff16
       internalID: 8908215424800718664
       vertices: []
       indices: 

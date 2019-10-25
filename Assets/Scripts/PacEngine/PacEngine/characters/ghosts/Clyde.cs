@@ -15,8 +15,8 @@ namespace PacEngine.characters.ghosts
 
         protected override Vector GetChaseTarget()
         {
-            var chase = (PacEngine.Instance.Pacman.Position - Position).Magnitude > MIN_DIST_TO_CHASE;
-            return chase ? PacEngine.Instance.Pacman.Position : ScatterPosition;
+            var chase = (PacmanEngine.Instance.Pacman.Position - Position).Magnitude > MIN_DIST_TO_CHASE;
+            return chase ? PacmanEngine.Instance.Pacman.Position : ScatterPosition;
         }
     }
 }

@@ -16,10 +16,10 @@ namespace PacEngine.characters.ghosts
 
         protected override Vector GetChaseTarget()
         {
-            var toAdd = (PacEngine.Instance.Pacman.HeadingDirection * PACMAN_HEADING_MULTIPLER);
-            if (PacEngine.Instance.UseBuggedVersion && PacEngine.Instance.Pacman.HeadingDirection.Compare(Vector.UP))
+            var toAdd = (PacmanEngine.Instance.Pacman.HeadingDirection * PACMAN_HEADING_MULTIPLER);
+            if (PacmanEngine.Instance.UseBuggedVersion && PacmanEngine.Instance.Pacman.HeadingDirection.Compare(Vector.UP))
                 toAdd += Vector.LEFT * PACMAN_HEADING_MULTIPLER;
-            return Board.ToBounds(PacEngine.Instance.Pacman.Position + toAdd);
+            return Board.ToBounds(PacmanEngine.Instance.Pacman.Position + toAdd);
         }
     }
 }
