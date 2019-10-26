@@ -10,7 +10,7 @@ namespace PacEngine.characters.ghosts
 
         }
 
-        protected override Vector ScatterPosition => new Vector(0, Board.Tiles[0].Length - 3);
+        protected override Vector ScatterPosition => new Vector(Board.Tiles.Length, Board.Tiles[0].Length - 4);
 
         protected override Vector GetChaseTarget() => PacmanEngine.Instance.Pacman.Position;
     }

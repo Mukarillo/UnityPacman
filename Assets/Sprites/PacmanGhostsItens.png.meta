@@ -608,6 +608,9 @@ TextureImporter:
   - first:
       213: 6391456293950830112
     second: PacmanGhostsItens_139
+  - first:
+      213: 3832503185898694702
+    second: target
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -2754,6 +2757,27 @@ TextureImporter:
       bones: []
       spriteID: 5f93c8c95c18e4e3dbab788d0e5cff16
       internalID: 8908215424800718664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: target
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91e1a04969a0d4b3a8b7135545bbb047
+      internalID: 3832503185898694702
       vertices: []
       indices: 
       edges: []

@@ -1,5 +1,4 @@
-﻿using System;
-using PacEngine.board;
+﻿using PacEngine.board;
 using PacEngine.utils;
 
 namespace PacEngine.characters.ghosts
@@ -12,7 +11,7 @@ namespace PacEngine.characters.ghosts
 
         }
 
-        protected override Vector ScatterPosition => new Vector(Board.Tiles.Length, Board.Tiles[0].Length);
+        protected override Vector ScatterPosition => new Vector(0, Board.Tiles[0].Length - 2);
 
         protected override Vector GetChaseTarget()
         {
@@ -20,7 +19,7 @@ namespace PacEngine.characters.ghosts
             if (PacmanEngine.Instance.UseBuggedVersion && PacmanEngine.Instance.Pacman.HeadingDirection.Compare(Vector.UP))
                 midPoint += Vector.LEFT * MID_POINT_MULTIPLIER;
 
-            var target = Board.ToBounds(midPoint + (PacmanEngine.Instance.Blinky.Position - midPoint));
+            var target = Board.ToBounds(PacmanEngine.Instance.Blinky.Position + ((midPoint - PacmanEngine.Instance.Blinky.Position) * 2));
 
             return target;
         }

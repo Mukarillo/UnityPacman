@@ -1,4 +1,5 @@
-﻿using PacEngine.board;
+﻿using System;
+using PacEngine.board;
 using PacEngine.board.tiles;
 using PacEngine.utils;
 
@@ -6,12 +7,23 @@ namespace PacEngine.characters
 {
     public abstract class AbstractCharacter
     {
-        public Vector Position { get; private set; }
+        //Events
+        public Action<Vector> OnMove;
+        public Action<Vector> OnTeleport;
+
+        public Vector Position { get; protected set; }
+
         public AbstractBoardTile CurrentTile => Board.GetTileAt(Position);
         public Vector HeadingDirection => LastMoveDirection;
 
         protected Board Board { get; private set; }
         protected Vector LastMoveDirection { get; set; }
+
+        public float TimeToTravelOneTile => BaseTimeToTravelOneTile / SpeedMultiplier;
+        protected virtual float SpeedMultiplier { get; } = 1f;
+        protected float BaseTimeToTravelOneTile => 1f / 11f;
+
+        private bool canMove = true;
 
         protected AbstractCharacter(Vector initialPosition, Board board)
         {
@@ -21,8 +33,13 @@ namespace PacEngine.characters
             LastMoveDirection = Vector.DOWN;
         }
 
-        public virtual bool Move(Vector direction)
+        protected virtual bool Move(Vector direction)
         {
+            if (!canMove)
+                return false;
+
+            LastMoveDirection = direction;
+
             Position += direction;
             if(Board.TryGetTileAt(Position, out var tile))
             {
@@ -32,8 +49,10 @@ namespace PacEngine.characters
                     return false;
                 }
 
+
+                canMove = false;
                 OnTileArrive(tile);
-                LastMoveDirection = direction;
+                OnMove?.Invoke(Position);
                 return true;
             }
 
@@ -45,9 +64,15 @@ namespace PacEngine.characters
             return false;
         }
 
+        public void DoneViewMove()
+        {
+            canMove = true;
+        }
+
         private void Teleport(Vector position)
         {
             Position = position;
+            OnTeleport?.Invoke(position);
         }
 
         protected virtual void OnTileArrive(AbstractBoardTile tile)

@@ -70,7 +70,8 @@ namespace PacEngine
 
                 if (keyToDir.TryGetValue(k, out var vector))
                 {
-                    PacmanEngine.Instance.Pacman.Move(vector);
+                    PacmanEngine.Instance.Pacman.ChangeHeadingDirection(vector);
+                    PacmanEngine.Instance.Pacman.Move();
                     PacmanEngine.Instance.Ghosts.ForEach(x => x.DoDecision());
                     Console.Write(PacmanEngine.Instance.Board);
                 }

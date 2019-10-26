@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using PacEngine.board;
 using PacEngine.board.tiles;
 using PacEngine.characters;
@@ -37,6 +38,12 @@ namespace PacEngine
             Pinky = new Pinky(ghostSpawnPosition + Vector.LEFT, Board);
             Inky = new Inky(ghostSpawnPosition, Board);
             Clyde = new Clyde(ghostSpawnPosition + Vector.RIGHT, Board);
+        }
+
+        internal void Step()
+        {
+            Pacman.Move();
+            Ghosts.ForEach(x => x.DoDecision());
         }
     }
 }

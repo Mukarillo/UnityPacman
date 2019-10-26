@@ -19,12 +19,13 @@ namespace PacEngine.characters.ghosts
         public GhostState State { get; private set; } = GhostState.CHASE;
 
         protected abstract Vector ScatterPosition { get; }
+        protected override float SpeedMultiplier => 1.3f;
 
         protected AbstractGhostCharacter(Vector initialPosition, Board board) : base(initialPosition, board)
         {
         }
 
-        protected virtual Vector GetTarget()
+        public virtual Vector GetTarget()
         {
             switch(State)
             {
@@ -35,7 +36,8 @@ namespace PacEngine.characters.ghosts
                 case GhostState.EATEN:
                     return Board.SpawnRoomPosition;
             }
-            return new Vector();
+
+            throw new PacException($"State {State} not implemented in GetTarget()");
         }
 
         protected abstract Vector GetChaseTarget();
@@ -52,6 +54,11 @@ namespace PacEngine.characters.ghosts
             ChangeState(GhostState.CHASE);
         }
 
+        public void Scatter()
+        {
+            ChangeState(GhostState.SCATTER);
+        }
+
         public void DoDecision()
         {
             var possibilities = GetAvailableDirectionsAtCurrentTile();
@@ -61,6 +68,7 @@ namespace PacEngine.characters.ghosts
                 direction = RandomGenerator.Instance.GetRandom(possibilities);
             else
                 direction = PathFinder.GetNextMove(Position, GetTarget(), GetAvailableDirectionsAtCurrentTile());
+
             Move(direction);
         }
 

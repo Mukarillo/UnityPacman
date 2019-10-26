@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using PacEngine;
 using PacEngine.board.prizes;
 using PacEngine.board.tiles;
@@ -10,9 +9,9 @@ public class PacmanViewController : MonoBehaviour
 {
     private Dictionary<KeyCode, Vector> keyToDir = new Dictionary<KeyCode, Vector>
     {
-        { KeyCode.W, Vector.DOWN },
+        { KeyCode.W, Vector.UP },
         { KeyCode.A, Vector.LEFT },
-        { KeyCode.S, Vector.UP },
+        { KeyCode.S, Vector.DOWN },
         { KeyCode.D, Vector.RIGHT }
     };
         
@@ -65,27 +64,31 @@ public class PacmanViewController : MonoBehaviour
         var blinkPos = new Vector(20, 14);
         PacmanEngine.Instance.InitiateGame(boardTiles, pacPos, blinkPos);
 
-        boardView.pacman.Move(pacPos);
-        boardView.blinky.Move(blinkPos);
+        boardView.Pacman.LinkEngineCharacter(PacmanEngine.Instance.Pacman);
+        boardView.Blinky.LinkEngineCharacter(PacmanEngine.Instance.Blinky);
+        boardView.Pinky.LinkEngineCharacter(PacmanEngine.Instance.Pinky);
+        boardView.Inky.LinkEngineCharacter(PacmanEngine.Instance.Inky);
+        boardView.Clyde.LinkEngineCharacter(PacmanEngine.Instance.Clyde);
     }
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+            PacmanEngine.Instance.Ghosts.ForEach(x => x.Scatter());
+
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+            PacmanEngine.Instance.Ghosts.ForEach(x => x.Chase());
+
         foreach (var kvp in keyToDir)
         {
-            if (Input.GetKeyDown(kvp.Key))
-                MovePacmanAndGhosts(kvp.Value);
+            if (Input.GetKey(kvp.Key))
+            {
+                PacmanEngine.Instance.Pacman.ChangeHeadingDirection(kvp.Value);
+                break;
+            }
         }
-    }
 
-    private void MovePacmanAndGhosts(Vector vector)
-    {
-        PacmanEngine.Instance.Pacman.Move(vector);
-        PacmanEngine.Instance.Ghosts.ForEach(x => x.DoDecision());
-
-        boardView.pacman.Move(PacmanEngine.Instance.Pacman.Position);
-        boardView.blinky.Move(PacmanEngine.Instance.Blinky.Position);
-
+        PacmanEngine.Instance.Step();
     }
 
     private static TileInfo GetInfo(int id, int prize = 0, List<Vector> forbiddenMovement = null)
