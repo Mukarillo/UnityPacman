@@ -151,7 +151,7 @@ TextureImporter:
     second: pinky_up_0
   - first:
       213: -3939734956110030623
-    second: PacmanGhostsItens_75
+    second: pinky_up_1
   - first:
       213: 8312929243810008766
     second: pinky_down_0
@@ -451,25 +451,25 @@ TextureImporter:
     second: PacmanGhostsItens_69
   - first:
       213: -2605494169672065931
-    second: PacmanGhostsItens_70
+    second: pinky_right_0
   - first:
       213: 5496217180617316599
-    second: PacmanGhostsItens_71
+    second: pinky_right_1
   - first:
       213: -7990503706496253240
-    second: PacmanGhostsItens_72
+    second: pinky_left_0
   - first:
       213: -5563358289771654038
-    second: PacmanGhostsItens_73
+    second: pinky_left_1
   - first:
       213: 8112834101045329536
-    second: PacmanGhostsItens_74
+    second: pinky_up_0
   - first:
       213: 8312929243810008766
-    second: PacmanGhostsItens_76
+    second: pinky_down_0
   - first:
       213: -4566817632984478445
-    second: PacmanGhostsItens_77
+    second: pinky_down_1
   - first:
       213: -5098255299158540265
     second: PacmanGhostsItens_78
@@ -490,55 +490,55 @@ TextureImporter:
     second: PacmanGhostsItens_83
   - first:
       213: 6930503001570575490
-    second: PacmanGhostsItens_84
+    second: inky_right_0
   - first:
       213: -6522608116201562693
-    second: PacmanGhostsItens_85
+    second: inky_right_1
   - first:
       213: 986704138950831098
-    second: PacmanGhostsItens_86
+    second: inky_left_0
   - first:
       213: 363148300133965221
-    second: PacmanGhostsItens_87
+    second: inky_left_1
   - first:
       213: -894544792295954497
-    second: PacmanGhostsItens_88
+    second: inky_up_0
   - first:
       213: 2465191341015201236
-    second: PacmanGhostsItens_89
+    second: inky_up_1
   - first:
       213: -4507640124593167157
-    second: PacmanGhostsItens_90
+    second: inky_down_0
   - first:
       213: 3033146652322442331
-    second: PacmanGhostsItens_91
+    second: inky_down_1
   - first:
       213: 1824539685684121785
     second: PacmanGhostsItens_97
   - first:
       213: 3707320718554909321
-    second: PacmanGhostsItens_98
+    second: clyde_right_0
   - first:
       213: -2059125313563396003
-    second: PacmanGhostsItens_99
+    second: clyde_right_1
   - first:
       213: -517044430876833482
-    second: PacmanGhostsItens_100
+    second: clyde_left_0
   - first:
       213: 8837469245230563991
-    second: PacmanGhostsItens_101
+    second: clyde_left_1
   - first:
       213: 5860589404515590315
-    second: PacmanGhostsItens_102
+    second: clyde_up_0
   - first:
       213: 9104603548866238830
-    second: PacmanGhostsItens_103
+    second: clyde_up_1
   - first:
       213: -6170907096212203250
-    second: PacmanGhostsItens_104
+    second: clyde_down_0
   - first:
       213: 695851763697886458
-    second: PacmanGhostsItens_105
+    second: clyde_down_1
   - first:
       213: 2888962797432100514
     second: PacmanGhostsItens_110
@@ -1817,7 +1817,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacmanGhostsItens_70
+      name: pinky_right_0
       rect:
         serializedVersion: 2
         x: 0
@@ -1838,7 +1838,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacmanGhostsItens_71
+      name: pinky_right_1
       rect:
         serializedVersion: 2
         x: 16
@@ -1859,7 +1859,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacmanGhostsItens_72
+      name: pinky_left_0
       rect:
         serializedVersion: 2
         x: 32
@@ -1880,7 +1880,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacmanGhostsItens_73
+      name: pinky_left_1
       rect:
         serializedVersion: 2
         x: 48
@@ -1901,7 +1901,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacmanGhostsItens_74
+      name: pinky_up_0
       rect:
         serializedVersion: 2
         x: 64
@@ -1922,7 +1922,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacmanGhostsItens_75
+      name: pinky_up_1
       rect:
         serializedVersion: 2
         x: 80
@@ -1943,7 +1943,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacmanGhostsItens_76
+      name: pinky_down_0
       rect:
         serializedVersion: 2
         x: 96
@@ -1964,7 +1964,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacmanGhostsItens_77
+      name: pinky_down_1
       rect:
         serializedVersion: 2
         x: 112
@@ -2069,7 +2069,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacmanGhostsItens_84
+      name: inky_right_0
       rect:
         serializedVersion: 2
         x: 0
@@ -2090,7 +2090,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacmanGhostsItens_85
+      name: inky_right_1
       rect:
         serializedVersion: 2
         x: 16
@@ -2111,7 +2111,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacmanGhostsItens_86
+      name: inky_left_0
       rect:
         serializedVersion: 2
         x: 32
@@ -2132,7 +2132,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacmanGhostsItens_87
+      name: inky_left_1
       rect:
         serializedVersion: 2
         x: 48
@@ -2153,7 +2153,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacmanGhostsItens_88
+      name: inky_up_0
       rect:
         serializedVersion: 2
         x: 64
@@ -2174,7 +2174,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacmanGhostsItens_89
+      name: inky_up_1
       rect:
         serializedVersion: 2
         x: 80
@@ -2195,7 +2195,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacmanGhostsItens_90
+      name: inky_down_0
       rect:
         serializedVersion: 2
         x: 96
@@ -2216,7 +2216,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacmanGhostsItens_91
+      name: inky_down_1
       rect:
         serializedVersion: 2
         x: 112
@@ -2342,7 +2342,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacmanGhostsItens_98
+      name: clyde_right_0
       rect:
         serializedVersion: 2
         x: 0
@@ -2363,7 +2363,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacmanGhostsItens_99
+      name: clyde_right_1
       rect:
         serializedVersion: 2
         x: 16
@@ -2384,7 +2384,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacmanGhostsItens_100
+      name: clyde_left_0
       rect:
         serializedVersion: 2
         x: 32
@@ -2405,7 +2405,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacmanGhostsItens_101
+      name: clyde_left_1
       rect:
         serializedVersion: 2
         x: 48
@@ -2426,7 +2426,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacmanGhostsItens_102
+      name: clyde_up_0
       rect:
         serializedVersion: 2
         x: 64
@@ -2447,7 +2447,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacmanGhostsItens_103
+      name: clyde_up_1
       rect:
         serializedVersion: 2
         x: 80
@@ -2468,7 +2468,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacmanGhostsItens_104
+      name: clyde_down_0
       rect:
         serializedVersion: 2
         x: 96
@@ -2489,7 +2489,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacmanGhostsItens_105
+      name: clyde_down_1
       rect:
         serializedVersion: 2
         x: 112
@@ -2770,7 +2770,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

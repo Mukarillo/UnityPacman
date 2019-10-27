@@ -4,13 +4,13 @@ using UnityEngine;
 
 public abstract class AbstractGhostCharacterView : AbstractCharacterView
 {
-    AbstractGhostCharacter EngineGhostCharacter => (AbstractGhostCharacter)EngineCharacter;
+    private AbstractGhostCharacter EngineGhostCharacter => (AbstractGhostCharacter)EngineCharacter;
 
     public Transform target;
 
-    public override void Teleport(Vector position)
+    public override void Move(Vector position)
     {
-        base.Teleport(position);
+        base.Move(position);
 
         var targetPos = EngineGhostCharacter.GetTarget();
         target.localPosition = new Vector3(targetPos.y, targetPos.x);

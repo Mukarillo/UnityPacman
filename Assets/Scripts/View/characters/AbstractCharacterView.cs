@@ -7,6 +7,15 @@ public abstract class AbstractCharacterView : MonoBehaviour
 {
     public AbstractCharacter EngineCharacter { get; private set; }
 
+    protected Animator animator;
+    private float animatorSpeed;
+
+    protected virtual void Awake()
+    {
+        animator = GetComponent<Animator>();
+        animatorSpeed = animator.speed;
+    }
+
     public void LinkEngineCharacter(AbstractCharacter engineCharacter)
     {
         EngineCharacter = engineCharacter;
@@ -16,9 +25,15 @@ public abstract class AbstractCharacterView : MonoBehaviour
 
     public virtual void Move(Vector position)
     {
+        animator.SetFloat("xVelocity", EngineCharacter.HeadingDirection.x);
+        animator.SetFloat("yVelocity", EngineCharacter.HeadingDirection.y);
+        animator.speed = animatorSpeed;
         transform.DOLocalMove(new Vector3(position.y, position.x), EngineCharacter.TimeToTravelOneTile)
             .SetEase(Ease.Linear)
-            .OnComplete(EngineCharacter.DoneViewMove);
+            .OnComplete( () => {
+                animator.speed = 0;
+                EngineCharacter.DoneViewMove();
+            });
     }
 
     public virtual void Teleport(Vector position)

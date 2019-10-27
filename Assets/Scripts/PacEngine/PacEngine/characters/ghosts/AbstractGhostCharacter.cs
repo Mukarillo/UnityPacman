@@ -19,7 +19,7 @@ namespace PacEngine.characters.ghosts
         public GhostState State { get; private set; } = GhostState.CHASE;
 
         protected abstract Vector ScatterPosition { get; }
-        protected override float SpeedMultiplier => 1.3f;
+        protected override float SpeedMultiplier => 0.7f;
 
         protected AbstractGhostCharacter(Vector initialPosition, Board board) : base(initialPosition, board)
         {
