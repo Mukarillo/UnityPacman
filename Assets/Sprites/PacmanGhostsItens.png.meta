@@ -472,16 +472,16 @@ TextureImporter:
     second: pinky_down_1
   - first:
       213: -5098255299158540265
-    second: PacmanGhostsItens_78
+    second: eaten_right
   - first:
       213: -4961415465243555064
-    second: PacmanGhostsItens_79
+    second: eaten_left
   - first:
       213: 2703690379450099947
-    second: PacmanGhostsItens_80
+    second: eaten_up
   - first:
       213: -479152367196145800
-    second: PacmanGhostsItens_81
+    second: eaten_down
   - first:
       213: 2455817412332509212
     second: PacmanGhostsItens_82
@@ -1985,7 +1985,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacmanGhostsItens_78
+      name: eaten_right
       rect:
         serializedVersion: 2
         x: 128
@@ -2006,7 +2006,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacmanGhostsItens_79
+      name: eaten_left
       rect:
         serializedVersion: 2
         x: 144
@@ -2027,7 +2027,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacmanGhostsItens_80
+      name: eaten_up
       rect:
         serializedVersion: 2
         x: 160
@@ -2048,7 +2048,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PacmanGhostsItens_81
+      name: eaten_down
       rect:
         serializedVersion: 2
         x: 176

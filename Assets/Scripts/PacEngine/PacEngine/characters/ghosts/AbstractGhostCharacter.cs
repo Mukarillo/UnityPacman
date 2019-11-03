@@ -3,6 +3,9 @@ using PacEngine.board;
 using PacEngine.board.tiles;
 using PacEngine.utils;
 using System.Linq;
+using System;
+using System.Threading.Tasks;
+using System.Threading;
 
 namespace PacEngine.characters.ghosts
 {
@@ -16,10 +19,17 @@ namespace PacEngine.characters.ghosts
             FRIGHTENED
         }
 
+        //Events
+        public Action<GhostState> OnChangeState;
+
         public GhostState State { get; private set; } = GhostState.CHASE;
+        public float TimeInFrightenedState { get; private set; } = 6f;
+        public float TimeInScatterState { get; private set; } = 6f;
 
         protected abstract Vector ScatterPosition { get; }
-        protected override float SpeedMultiplier => 0.7f;
+        protected override float SpeedMultiplier => GetSpeedMultiplier();
+
+        private CancellationTokenSource delayedCancellationCall;
 
         protected AbstractGhostCharacter(Vector initialPosition, Board board) : base(initialPosition, board)
         {
@@ -44,8 +54,11 @@ namespace PacEngine.characters.ghosts
 
         public void Frightened()
         {
+            delayedCancellationCall?.Cancel();
+
             TurnAround();
             ChangeState(GhostState.FRIGHTENED);
+            WaitAndCall((int)(TimeInFrightenedState * 1000), Chase);
         }
 
         public void Chase()
@@ -57,6 +70,13 @@ namespace PacEngine.characters.ghosts
         public void Scatter()
         {
             ChangeState(GhostState.SCATTER);
+            WaitAndCall((int)(TimeInScatterState * 1000), Chase);
+        }
+
+        public void Eaten()
+        {
+            delayedCancellationCall?.Cancel();
+            ChangeState(GhostState.EATEN);
         }
 
         public void DoDecision()
@@ -101,11 +121,29 @@ namespace PacEngine.characters.ghosts
         protected void ChangeState(GhostState state)
         {
             State = state;
+            OnChangeState?.Invoke(State);
         }
 
         protected void TurnAround()
         {
             LastMoveDirection = -LastMoveDirection;
+        }
+
+        private async Task WaitAndCall(int time, Action callback)
+        {
+            delayedCancellationCall = new CancellationTokenSource();
+            await Task.Delay(time, delayedCancellationCall.Token);
+            callback.Invoke();
+        }
+
+        private float GetSpeedMultiplier()
+        {
+            if (State == GhostState.FRIGHTENED)
+                return 0.5f;
+            if (State == GhostState.EATEN)
+                return 2f;
+
+            return 0.7f;
         }
     }
 }

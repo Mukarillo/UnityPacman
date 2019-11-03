@@ -24,7 +24,7 @@ namespace PacEngine.board.tiles
             switch(info.TileType)
             {
                 case TileTypes.WALKABLE:
-                    return new WalkableBoardTile(position, PrizeFactory.GetPrize(info.PrizeType), info.ForbiddenMovement);
+                    return new WalkableBoardTile(position, PrizeFactory.GetPrize(info.PrizeType, position), info.ForbiddenMovement);
                 case TileTypes.BLOCKER:
                     return new BlockerBoardTile(position);
             }

@@ -5,6 +5,9 @@ using DG.Tweening;
 
 public abstract class AbstractCharacterView : MonoBehaviour
 {
+    private const string ANIMTOR_X_VELOCITY = "xVelocity";
+    private const string ANIMTOR_Y_VELOCITY = "yVelocity";
+
     public AbstractCharacter EngineCharacter { get; private set; }
 
     protected Animator animator;
@@ -16,7 +19,7 @@ public abstract class AbstractCharacterView : MonoBehaviour
         animatorSpeed = animator.speed;
     }
 
-    public void LinkEngineCharacter(AbstractCharacter engineCharacter)
+    public virtual void LinkEngineCharacter(AbstractCharacter engineCharacter)
     {
         EngineCharacter = engineCharacter;
         engineCharacter.OnMove += Move;
@@ -25,8 +28,8 @@ public abstract class AbstractCharacterView : MonoBehaviour
 
     public virtual void Move(Vector position)
     {
-        animator.SetFloat("xVelocity", EngineCharacter.HeadingDirection.x);
-        animator.SetFloat("yVelocity", EngineCharacter.HeadingDirection.y);
+        animator.SetFloat(ANIMTOR_X_VELOCITY, EngineCharacter.HeadingDirection.x);
+        animator.SetFloat(ANIMTOR_Y_VELOCITY, EngineCharacter.HeadingDirection.y);
         animator.speed = animatorSpeed;
         transform.DOLocalMove(new Vector3(position.y, position.x), EngineCharacter.TimeToTravelOneTile)
             .SetEase(Ease.Linear)

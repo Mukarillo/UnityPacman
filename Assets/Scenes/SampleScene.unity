@@ -175,6 +175,7 @@ GameObject:
   - component: {fileID: 106532353}
   - component: {fileID: 106532354}
   - component: {fileID: 106532355}
+  - component: {fileID: 106532356}
   m_Layer: 0
   m_Name: Blinky
   m_TagString: Untagged
@@ -258,6 +259,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1700479289}
+--- !u!95 &106532356
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106532352}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 44d1d1bf9798e4ae38c0dd063dbacd27, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &400682644
 GameObject:
   m_ObjectHideFlags: 0
@@ -12111,6 +12131,7 @@ GameObject:
   - component: {fileID: 758464457}
   - component: {fileID: 758464456}
   - component: {fileID: 758464455}
+  - component: {fileID: 758464458}
   m_Layer: 0
   m_Name: Clyde
   m_TagString: Untagged
@@ -12194,6 +12215,25 @@ Transform:
   m_Father: {fileID: 400682645}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &758464458
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758464454}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ef1d8da50196c42ed8fe73f5bac1ff3d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &850675076
 GameObject:
   m_ObjectHideFlags: 0
@@ -12205,6 +12245,7 @@ GameObject:
   - component: {fileID: 850675077}
   - component: {fileID: 850675078}
   - component: {fileID: 850675079}
+  - component: {fileID: 850675080}
   m_Layer: 0
   m_Name: Inky
   m_TagString: Untagged
@@ -12288,6 +12329,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 2034219528}
+--- !u!95 &850675080
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850675076}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2be1d355bde0a4f4c82b65ab38e31d34, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1095434102
 GameObject:
   m_ObjectHideFlags: 0
@@ -12539,6 +12599,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7e70a8e536d74a3a973146872407ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prizesOffset: {x: -8, y: -21}
+  tilemap: {fileID: 750626529}
+  pacDot: {fileID: 11400000, guid: e965fed94c5e94e2aa455ab7baf0e0c6, type: 2}
+  powerPellet: {fileID: 11400000, guid: e5c10bd4c178e422a97762e8356b6026, type: 2}
   pacman: {fileID: 1362730538}
   blinky: {fileID: 106532355}
   pinky: {fileID: 1984112562}
@@ -12635,6 +12699,7 @@ GameObject:
   - component: {fileID: 1984112560}
   - component: {fileID: 1984112561}
   - component: {fileID: 1984112562}
+  - component: {fileID: 1984112563}
   m_Layer: 0
   m_Name: Pinky
   m_TagString: Untagged
@@ -12718,6 +12783,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 2120168091}
+--- !u!95 &1984112563
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984112559}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 05fefa48dec8144339bf30a0a53d2093, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2034219527
 GameObject:
   m_ObjectHideFlags: 0

@@ -31,6 +31,8 @@ namespace PacEngine.characters
         {
             base.OnTileArrive(tile);
 
+            (tile as WalkableBoardTile)?.Prize?.TryCollect();
+
             if (!nextDirection.HasValue)
                 return;
 

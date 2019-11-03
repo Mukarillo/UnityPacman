@@ -43,7 +43,35 @@ namespace PacEngine
         internal void Step()
         {
             Pacman.Move();
+            CheckCollision();
             Ghosts.ForEach(x => x.DoDecision());
+            CheckCollision();
+        }
+
+        private void CheckCollision()
+        {
+            Ghosts.ForEach(CheckGhostCollision);
+        }
+
+        private void CheckGhostCollision(AbstractGhostCharacter ghost)
+        {
+            if (ghost.State == AbstractGhostCharacter.GhostState.EATEN)
+                return;
+
+            if (Pacman.Position.Equals(ghost.Position))
+                ResolveCollision(ghost);
+        }
+
+        private void ResolveCollision(AbstractGhostCharacter ghost)
+        {
+            if (ghost.State == AbstractGhostCharacter.GhostState.FRIGHTENED)
+                ghost.Eaten();
+            else
+                GameOver();
+        }
+
+        private void GameOver()
+        {
         }
     }
 }

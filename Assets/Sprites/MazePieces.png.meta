@@ -247,13 +247,13 @@ TextureImporter:
     second: MazePieces_91
   - first:
       213: 7537734328375321470
-    second: MazePieces_93
+    second: pac_dot
   - first:
       213: -4188818115783607691
     second: MazePieces_94
   - first:
       213: 6357228180100204554
-    second: MazePieces_95
+    second: power_pallet
   - first:
       213: -7297305622041047304
     second: MazePieces_96
@@ -2198,7 +2198,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MazePieces_93
+      name: pac_dot
       rect:
         serializedVersion: 2
         x: 117
@@ -2240,7 +2240,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MazePieces_95
+      name: power_pallet
       rect:
         serializedVersion: 2
         x: 135
@@ -3298,7 +3298,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
