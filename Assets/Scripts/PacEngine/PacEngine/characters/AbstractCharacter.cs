@@ -10,8 +10,10 @@ namespace PacEngine.characters
         //Events
         public Action<Vector> OnMove;
         public Action<Vector> OnTeleport;
+        public Action<bool> OnToggleVisibility;
 
         public Vector Position { get; protected set; }
+        public bool IsActive { get; private set; }
 
         public AbstractBoardTile CurrentTile => Board.GetTileAt(Position);
         public Vector HeadingDirection => LastMoveDirection;
@@ -23,11 +25,12 @@ namespace PacEngine.characters
         protected virtual float SpeedMultiplier { get; } = 1f;
         protected float BaseTimeToTravelOneTile => 1f / 11f;
 
-        private bool canMove = true;
+        protected abstract void DoDecision();
+        protected abstract void OnTileArrive(AbstractBoardTile tile);
 
         protected AbstractCharacter(Vector initialPosition, Board board)
         {
-            Position = initialPosition;
+            Teleport(initialPosition);
             this.Board = board;
 
             LastMoveDirection = Vector.DOWN;
@@ -35,7 +38,7 @@ namespace PacEngine.characters
 
         protected virtual bool Move(Vector direction)
         {
-            if (!canMove)
+            if (!IsActive || PacmanEngine.Instance.GameOver)
                 return false;
 
             LastMoveDirection = direction;
@@ -49,9 +52,6 @@ namespace PacEngine.characters
                     return false;
                 }
 
-
-                canMove = false;
-                OnTileArrive(tile);
                 OnMove?.Invoke(Position);
                 return true;
             }
@@ -66,18 +66,37 @@ namespace PacEngine.characters
 
         public void DoneViewMove()
         {
-            canMove = true;
+            Board.TryGetTileAt(Position, out var tile);
+            OnTileArrive(tile);
+
+            PacmanEngine.Instance.CheckCollision();
+            DoDecision();
+        }
+
+        internal void Start(Vector position)
+        {
+            Teleport(position);
+            ToggleActive(true);
+            ToggleVisibility(true);
+
+            DoDecision();
+        }
+        internal void Stop() => ToggleActive(false);
+
+        protected virtual void ToggleActive(bool active)
+        {
+            IsActive = active;
+        }
+
+        internal void ToggleVisibility(bool active)
+        {
+            OnToggleVisibility?.Invoke(active);
         }
 
         private void Teleport(Vector position)
         {
             Position = position;
             OnTeleport?.Invoke(position);
-        }
-
-        protected virtual void OnTileArrive(AbstractBoardTile tile)
-        {
-
         }
     }
 }

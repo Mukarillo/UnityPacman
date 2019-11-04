@@ -79,7 +79,7 @@ namespace PacEngine.characters.ghosts
             ChangeState(GhostState.EATEN);
         }
 
-        public void DoDecision()
+        protected override void DoDecision()
         {
             var possibilities = GetAvailableDirectionsAtCurrentTile();
             Vector direction;
@@ -107,10 +107,17 @@ namespace PacEngine.characters.ghosts
 
         protected override void OnTileArrive(AbstractBoardTile tile)
         {
-            base.OnTileArrive(tile);
+            if (PacmanEngine.Instance.GameOver)
+                return;
 
             if (State == GhostState.EATEN && tile.Position.Compare(Board.SpawnRoomPosition))
                 Revive();
+        }
+
+        protected override void ToggleActive(bool active)
+        {
+            base.ToggleActive(active);
+            ToggleVisibility(active);
         }
 
         protected void Revive()
@@ -143,7 +150,7 @@ namespace PacEngine.characters.ghosts
             if (State == GhostState.EATEN)
                 return 2f;
 
-            return 0.7f;
+            return 0.5f;
         }
     }
 }

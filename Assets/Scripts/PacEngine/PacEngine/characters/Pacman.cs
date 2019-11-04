@@ -1,4 +1,5 @@
-﻿using PacEngine.board;
+﻿using System;
+using PacEngine.board;
 using PacEngine.board.tiles;
 using PacEngine.utils;
 
@@ -6,30 +7,43 @@ namespace PacEngine.characters
 {
     public class Pacman : AbstractCharacter
     {
-        private Vector? nextDirection = null;
+        public Action OnDie;
 
-        public Pacman(Vector initialPosition, Board board) : base (initialPosition, board)
+        private Vector? nextDirection = null;
+        private bool waitToMove;
+
+        public Pacman(Vector initialPosition, Board board) : base(initialPosition, board)
         {
             LastMoveDirection = Vector.LEFT;
         }
 
-
-        public void Move()
+        protected override void DoDecision()
         {
-            Move(LastMoveDirection);
+            waitToMove = Move(LastMoveDirection);
         }
 
         public void ChangeHeadingDirection(Vector direction)
         {
+            var sameDirection = LastMoveDirection.Equals(direction);
+
             if (Board.TryGetTileAt(Position + direction, out var tile) && tile is BlockerBoardTile)
                 nextDirection = direction;
             else
+            {
                 LastMoveDirection = direction;
+                nextDirection = null;
+
+                if (!sameDirection && !waitToMove)
+                    DoDecision();
+            }
         }
 
         protected override void OnTileArrive(AbstractBoardTile tile)
         {
-            base.OnTileArrive(tile);
+            if (PacmanEngine.Instance.GameOver)
+                return;
+
+            waitToMove = false;
 
             (tile as WalkableBoardTile)?.Prize?.TryCollect();
 
@@ -41,6 +55,11 @@ namespace PacEngine.characters
 
             LastMoveDirection = nextDirection.Value;
             nextDirection = null;
+        }
+
+        internal void Die()
+        {
+            OnDie?.Invoke();
         }
     }
 }

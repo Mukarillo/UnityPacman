@@ -64,7 +64,7 @@ public class PacmanViewController : MonoBehaviour
 
         var pacPos = new Vector(8, 15);
         var blinkPos = new Vector(20, 14);
-        PacmanEngine.Instance.InitiateGame(boardTiles, pacPos, blinkPos);
+        PacmanEngine.Instance.SetupBoard(boardTiles, pacPos, blinkPos);
 
         boardView.Pacman.LinkEngineCharacter(PacmanEngine.Instance.Pacman);
         boardView.Blinky.LinkEngineCharacter(PacmanEngine.Instance.Blinky);
@@ -73,6 +73,8 @@ public class PacmanViewController : MonoBehaviour
         boardView.Clyde.LinkEngineCharacter(PacmanEngine.Instance.Clyde);
 
         boardView.CreateDotsAndPellets(PacmanEngine.Instance.Board.Tiles);
+
+        PacmanEngine.Instance.InitiateGame();
     }
 
     void Update()
@@ -91,8 +93,6 @@ public class PacmanViewController : MonoBehaviour
                 break;
             }
         }
-
-        PacmanEngine.Instance.Step();
     }
 
     private static TileInfo GetInfo(int id, int prize = 0, List<Vector> forbiddenMovement = null)

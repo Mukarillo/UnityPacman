@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using PacEngine.board;
 using PacEngine.board.tiles;
 using PacEngine.characters;
@@ -10,6 +11,8 @@ namespace PacEngine
 {
     public class PacmanEngine
     {
+        private float TIME_TO_RESET = 3f;
+
         private static PacmanEngine instance;
         public static PacmanEngine Instance => instance ?? (instance = new PacmanEngine());
 
@@ -22,6 +25,8 @@ namespace PacEngine
         public Inky Inky { get; private set; }
         public Clyde Clyde { get; private set; }
 
+        public bool GameOver { get; private set; }
+
         public List<AbstractGhostCharacter> Ghosts => new List<AbstractGhostCharacter>
         {
             Blinky,
@@ -30,8 +35,14 @@ namespace PacEngine
             Clyde
         };
 
-        public void InitiateGame(TileInfo[][] boardTiles, Vector pacmanPosition, Vector ghostSpawnPosition)
+        private Vector pacmanPosition;
+        private Vector ghostSpawnPosition;
+
+        public void SetupBoard(TileInfo[][] boardTiles, Vector pacmanPosition, Vector ghostSpawnPosition)
         {
+            this.pacmanPosition = pacmanPosition;
+            this.ghostSpawnPosition = ghostSpawnPosition;
+
             Board = new Board(boardTiles, ghostSpawnPosition);
             Pacman = new Pacman(pacmanPosition, Board);
             Blinky = new Blinky(ghostSpawnPosition + Vector.LEFT * 2, Board);
@@ -40,15 +51,14 @@ namespace PacEngine
             Clyde = new Clyde(ghostSpawnPosition + Vector.RIGHT, Board);
         }
 
-        internal void Step()
+        public void InitiateGame()
         {
-            Pacman.Move();
-            CheckCollision();
-            Ghosts.ForEach(x => x.DoDecision());
-            CheckCollision();
+            GameOver = false;
+            Pacman.Start(pacmanPosition);
+            Ghosts.ForEach(x => x.Start(ghostSpawnPosition));
         }
 
-        private void CheckCollision()
+        internal void CheckCollision()
         {
             Ghosts.ForEach(CheckGhostCollision);
         }
@@ -67,11 +77,29 @@ namespace PacEngine
             if (ghost.State == AbstractGhostCharacter.GhostState.FRIGHTENED)
                 ghost.Eaten();
             else
-                GameOver();
+                EndGame();
         }
 
-        private void GameOver()
+        private void EndGame()
         {
+            if (GameOver)
+                return;
+
+            GameOver = true;
+            UnityEngine.Debug.LogWarning("GAME OVER");
+
+            Pacman.Stop();
+            Ghosts.ForEach(x => x.Stop());
+
+            Pacman.Die();
+
+            WaitAndCall(((int)TIME_TO_RESET * 1000), InitiateGame);
+        }
+
+        private async Task WaitAndCall(int time, Action callback)
+        {
+            await Task.Delay(time);
+            callback.Invoke();
         }
     }
 }
