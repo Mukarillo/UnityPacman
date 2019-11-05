@@ -6,8 +6,6 @@ namespace PacEngine.board.tiles
 {
     public class WalkableBoardTile : AbstractBoardTile
     {
-        public override bool IsWalkable => true;
-
         public AbstractPrize Prize { get; private set; }
         public List<Vector> ForbiddenMovementDirections { get; private set; }
 

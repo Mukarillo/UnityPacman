@@ -11,7 +11,8 @@ namespace PacEngine.characters.ghosts
 
         public Pinky(Vector initialPosition, Board board) : base(initialPosition, board)
         {
-
+            lockedTarget = initialPosition + (Vector.UP * 3);
+            ChangeState(GhostState.LOCKED);
         }
 
         protected override Vector GetChaseTarget()

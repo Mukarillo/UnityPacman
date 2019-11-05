@@ -10,6 +10,7 @@ public abstract class AbstractCharacterView : MonoBehaviour
 
     public AbstractCharacter EngineCharacter { get; private set; }
 
+    protected Vector2 positionOffset = Vector2.zero;
     protected Tween moveTween;
     protected Animator animator;
     private float animatorSpeed;
@@ -26,6 +27,8 @@ public abstract class AbstractCharacterView : MonoBehaviour
         engineCharacter.OnMove += Move;
         engineCharacter.OnTeleport += Teleport;
         engineCharacter.OnToggleVisibility += ToggleVisibility;
+
+        transform.localPosition = new Vector3(engineCharacter.Position.y + positionOffset.x, engineCharacter.Position.x + positionOffset.y);
     }
 
     protected virtual void ToggleVisibility(bool active)
@@ -40,7 +43,7 @@ public abstract class AbstractCharacterView : MonoBehaviour
         animator.SetFloat(ANIMTOR_X_VELOCITY, EngineCharacter.HeadingDirection.x);
         animator.SetFloat(ANIMTOR_Y_VELOCITY, EngineCharacter.HeadingDirection.y);
         ResetAnimatorSpeed();
-        moveTween = transform.DOLocalMove(new Vector3(position.y, position.x), EngineCharacter.TimeToTravelOneTile)
+        moveTween = transform.DOLocalMove(new Vector3(position.y + positionOffset.x, position.x + positionOffset.y), EngineCharacter.TimeToTravelOneTile)
             .SetEase(Ease.Linear)
             .OnComplete( () => {
                 animator.speed = 0;
@@ -55,7 +58,7 @@ public abstract class AbstractCharacterView : MonoBehaviour
 
     public virtual void Teleport(Vector position)
     {
-        transform.localPosition = new Vector3(position.y, position.x);
+        transform.localPosition = new Vector3(position.y + positionOffset.x, position.x + positionOffset.y);
         EngineCharacter.DoneViewMove();
     }
 }

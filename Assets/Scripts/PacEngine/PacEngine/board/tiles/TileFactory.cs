@@ -9,6 +9,7 @@ namespace PacEngine.board.tiles
         public TileFactory.TileTypes TileType { get; set; }
         public PrizeFactory.PrizeTypes PrizeType { get; set; }
         public List<Vector> ForbiddenMovement { get; set; }
+        public Vector doorOutDirection;
     }
 
     public class TileFactory
@@ -16,7 +17,8 @@ namespace PacEngine.board.tiles
         public enum TileTypes
         {
             WALKABLE,
-            BLOCKER
+            BLOCKER,
+            DOOR
         }
 
         internal static AbstractBoardTile GetTile(TileInfo info, Vector position)
@@ -27,6 +29,8 @@ namespace PacEngine.board.tiles
                     return new WalkableBoardTile(position, PrizeFactory.GetPrize(info.PrizeType, position), info.ForbiddenMovement);
                 case TileTypes.BLOCKER:
                     return new BlockerBoardTile(position);
+                case TileTypes.DOOR:
+                    return new DoorBoardTile(info.doorOutDirection, position);
             }
 
             throw new PacException($"Tile of type {info.TileType} is not implemented in TileFactory.GetTile");

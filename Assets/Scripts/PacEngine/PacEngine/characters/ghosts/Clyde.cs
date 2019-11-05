@@ -10,7 +10,7 @@ namespace PacEngine.characters.ghosts
 
         public Clyde(Vector initialPosition, Board board) : base(initialPosition, board)
         {
-
+            ChangeState(GhostState.LOCKED);
         }
 
         protected override Vector GetChaseTarget()

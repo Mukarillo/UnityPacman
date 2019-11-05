@@ -6,11 +6,13 @@ namespace PacEngine.board
     public class Board
     {
         public AbstractBoardTile[][] Tiles { get; private set; }
-        public Vector SpawnRoomPosition { get; private set; }
+        public Vector PositionInFrontOfPrision { get; private set; }
+        public Vector PositionInsideOfPrision { get; private set; }
 
-        public Board(TileInfo[][] boardTilesInfo, Vector spawnRoomPosition)
+        public Board(TileInfo[][] boardTilesInfo, Vector positionInFrontOfPrision, Vector positionInsideOfPrision)
         {
-            SpawnRoomPosition = spawnRoomPosition;
+            PositionInFrontOfPrision = positionInFrontOfPrision;
+            PositionInsideOfPrision = positionInsideOfPrision;
 
             Tiles = new AbstractBoardTile[boardTilesInfo.Length][];
             for (int x = 0; x < boardTilesInfo.Length; x++)

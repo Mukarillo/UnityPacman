@@ -16,13 +16,15 @@ namespace PacEngine.characters.ghosts
             CHASE,
             SCATTER,
             EATEN,
-            FRIGHTENED
+            FRIGHTENED,
+            LOCKED,
+            UNLOCKED
         }
 
         //Events
         public Action<GhostState> OnChangeState;
 
-        public GhostState State { get; private set; } = GhostState.CHASE;
+        public virtual GhostState State { get; private set; } = GhostState.SCATTER;
         public float TimeInFrightenedState { get; private set; } = 6f;
         public float TimeInScatterState { get; private set; } = 6f;
 
@@ -33,6 +35,7 @@ namespace PacEngine.characters.ghosts
 
         protected AbstractGhostCharacter(Vector initialPosition, Board board) : base(initialPosition, board)
         {
+            lockedTarget = initialPosition + (Vector.DOWN * 3);
         }
 
         public virtual Vector GetTarget()
@@ -44,10 +47,26 @@ namespace PacEngine.characters.ghosts
                 case GhostState.SCATTER:
                     return ScatterPosition;
                 case GhostState.EATEN:
-                    return Board.SpawnRoomPosition;
+                    return Board.PositionInsideOfPrision;
+                case GhostState.LOCKED:
+                    return LockedTarget();
+                case GhostState.UNLOCKED:
+                    return Board.PositionInFrontOfPrision;
             }
 
             throw new PacException($"State {State} not implemented in GetTarget()");
+        }
+
+        protected Vector lockedTarget;
+        private Vector LockedTarget()
+        {
+            if (Board.TryGetTileAt(Position + (Vector.DOWN), out var t) && t is BlockerBoardTile)
+                lockedTarget = Position + (Vector.UP * 3);
+            if (Board.TryGetTileAt(Position + (Vector.UP), out t) && t is BlockerBoardTile)
+                lockedTarget = Position + (Vector.DOWN * 3);
+
+
+            return lockedTarget;
         }
 
         protected abstract Vector GetChaseTarget();
@@ -79,6 +98,11 @@ namespace PacEngine.characters.ghosts
             ChangeState(GhostState.EATEN);
         }
 
+        public void Unlock()
+        {
+            ChangeState(GhostState.UNLOCKED);
+        }
+
         protected override void DoDecision()
         {
             var possibilities = GetAvailableDirectionsAtCurrentTile();
@@ -94,8 +118,12 @@ namespace PacEngine.characters.ghosts
 
         protected List<Vector> GetAvailableDirectionsAtCurrentTile()
         {
+            if (CurrentTile.AvailableDirectionsToWalk?.Count == 0)
+                return new List<Vector>();
+
             var p = CurrentTile.AvailableDirectionsToWalk.Except(((WalkableBoardTile)CurrentTile).ForbiddenMovementDirections).ToList();
-            p.Remove(-LastMoveDirection);
+            if(State != GhostState.LOCKED)
+                p.Remove(-LastMoveDirection);
 
             //If there are no options, the ghost is in the edge of the screen, so we force to walk towards the
             //void, so he can teleport to the other side of the board.
@@ -110,8 +138,15 @@ namespace PacEngine.characters.ghosts
             if (PacmanEngine.Instance.GameOver)
                 return;
 
-            if (State == GhostState.EATEN && tile.Position.Compare(Board.SpawnRoomPosition))
+            if (State == GhostState.EATEN && tile.Position.Compare(Board.PositionInsideOfPrision))
                 Revive();
+            else if (State == GhostState.UNLOCKED && tile.Position.Compare(Board.PositionInFrontOfPrision))
+                ChangeState(GhostState.CHASE);
+        }
+
+        protected override bool IsDoorWalkable()
+        {
+            return State == GhostState.UNLOCKED || State == GhostState.EATEN;
         }
 
         protected override void ToggleActive(bool active)
@@ -122,7 +157,8 @@ namespace PacEngine.characters.ghosts
 
         protected void Revive()
         {
-            ChangeState(GhostState.CHASE);
+            //TODO: Change Sprite
+            ChangeState(GhostState.UNLOCKED);
         }
 
         protected void ChangeState(GhostState state)

@@ -5,8 +5,6 @@ namespace PacEngine.board.tiles
 {
     public abstract class AbstractBoardTile
     {
-        public abstract bool IsWalkable { get; }
-
         public Vector Position { get; private set; }
         public Dictionary<Vector, AbstractBoardTile> DirectionNeighbor { get; private set; } = new Dictionary<Vector, AbstractBoardTile>();
         public List<Vector> AvailableDirectionsToWalk { get; private set; } = new List<Vector>();
@@ -14,11 +12,6 @@ namespace PacEngine.board.tiles
         protected AbstractBoardTile(Vector position)
         {
             Position = position;
-        }
-
-        public override string ToString()
-        {
-            return $"{(IsWalkable ? "." : "x")}";
         }
 
         public void ResolveNeighbors(Board board)
@@ -32,7 +25,7 @@ namespace PacEngine.board.tiles
                 if (board.TryGetTileAt(neighborPosition, out var element))
                     DirectionNeighbor.Add(direction, element);
 
-                if (element is WalkableBoardTile)
+                if (element is WalkableBoardTile || element is DoorBoardTile)
                     AvailableDirectionsToWalk.Add(direction);
             }
         }

@@ -404,6 +404,9 @@ TextureImporter:
   - first:
       213: -7282912823437880877
     second: MazePieces_0
+  - first:
+      213: -7639116950857379750
+    second: door
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -3306,6 +3309,27 @@ TextureImporter:
       bones: []
       spriteID: 4d054d23e1d9d498eab48de2cc2ba2b8
       internalID: -7282912823437880877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 0
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fa5da62abd11496590d0e8f6e88a7f3
+      internalID: -7639116950857379750
       vertices: []
       indices: 
       edges: []

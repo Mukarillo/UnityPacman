@@ -46,8 +46,10 @@ namespace PacEngine.characters
             Position += direction;
             if(Board.TryGetTileAt(Position, out var tile))
             {
-                if (tile is BlockerBoardTile)
+                UnityEngine.Debug.LogWarning((tile is DoorBoardTile) + " " + IsDoorWalkable());
+                if (tile is BlockerBoardTile && !(tile is DoorBoardTile && IsDoorWalkable()))
                 {
+                    UnityEngine.Debug.LogWarning("ENTREI");
                     Position -= direction;
                     return false;
                 }
@@ -63,6 +65,8 @@ namespace PacEngine.characters
             Teleport(new Vector(x, y));
             return false;
         }
+
+        protected abstract bool IsDoorWalkable();
 
         public void DoneViewMove()
         {

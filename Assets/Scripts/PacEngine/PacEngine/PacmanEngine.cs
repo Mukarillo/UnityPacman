@@ -36,31 +36,37 @@ namespace PacEngine
         };
 
         private Vector pacmanPosition;
-        private Vector ghostSpawnPosition;
+        private Vector positionInFrontOfPrision;
+        private Vector positionInsideOfPrision;
 
-        public void SetupBoard(TileInfo[][] boardTiles, Vector pacmanPosition, Vector ghostSpawnPosition)
+        public void SetupBoard(TileInfo[][] boardTiles, Vector pacmanPosition, Vector positionInFrontOfPrision, Vector positionInsideOfPrision)
         {
             this.pacmanPosition = pacmanPosition;
-            this.ghostSpawnPosition = ghostSpawnPosition;
+            this.positionInFrontOfPrision = positionInFrontOfPrision;
+            this.positionInsideOfPrision = positionInsideOfPrision;
 
-            Board = new Board(boardTiles, ghostSpawnPosition);
+            Board = new Board(boardTiles, positionInFrontOfPrision, positionInsideOfPrision);
             Pacman = new Pacman(pacmanPosition, Board);
-            Blinky = new Blinky(ghostSpawnPosition + Vector.LEFT * 2, Board);
-            Pinky = new Pinky(ghostSpawnPosition + Vector.LEFT, Board);
-            Inky = new Inky(ghostSpawnPosition, Board);
-            Clyde = new Clyde(ghostSpawnPosition + Vector.RIGHT, Board);
+            //Blinky = new Blinky(positionInFrontOfPrision, Board);
+            Pinky = new Pinky(positionInsideOfPrision, Board);
+            //Inky = new Inky((positionInsideOfPrision + (Vector.LEFT * 2)), Board);
+            //Clyde = new Clyde((positionInsideOfPrision + (Vector.RIGHT * 2)), Board);
         }
 
         public void InitiateGame()
         {
             GameOver = false;
             Pacman.Start(pacmanPosition);
-            Ghosts.ForEach(x => x.Start(ghostSpawnPosition));
+
+            //Blinky.Start(positionInFrontOfPrision);
+            Pinky.Start(positionInsideOfPrision);
+            //Inky.Start(positionInsideOfPrision + Vector.LEFT * 2);
+            //Clyde.Start(positionInsideOfPrision + Vector.RIGHT * 2);
         }
 
         internal void CheckCollision()
         {
-            Ghosts.ForEach(CheckGhostCollision);
+            //Ghosts.ForEach(CheckGhostCollision);
         }
 
         private void CheckGhostCollision(AbstractGhostCharacter ghost)

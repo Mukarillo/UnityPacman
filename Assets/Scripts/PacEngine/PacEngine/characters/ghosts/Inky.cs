@@ -8,7 +8,7 @@ namespace PacEngine.characters.ghosts
         private const int MID_POINT_MULTIPLIER = 2;
         public Inky(Vector initialPosition, Board board) : base(initialPosition, board)
         {
-
+            ChangeState(GhostState.LOCKED);
         }
 
         protected override Vector ScatterPosition => new Vector(0, Board.Tiles[0].Length - 2);

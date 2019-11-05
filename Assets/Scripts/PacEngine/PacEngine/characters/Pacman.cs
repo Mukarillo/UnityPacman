@@ -61,5 +61,7 @@ namespace PacEngine.characters
         {
             OnDie?.Invoke();
         }
+
+        protected override bool IsDoorWalkable() => false;
     }
 }
