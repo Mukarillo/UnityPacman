@@ -121,9 +121,18 @@ namespace PacEngine.characters.ghosts
             if (CurrentTile.AvailableDirectionsToWalk?.Count == 0)
                 return new List<Vector>();
 
-            var p = CurrentTile.AvailableDirectionsToWalk.Except(((WalkableBoardTile)CurrentTile).ForbiddenMovementDirections).ToList();
-            if(State != GhostState.LOCKED)
+            var p = CurrentTile.AvailableDirectionsToWalk;
+            if (CurrentTile is WalkableBoardTile walkable)
+                p = p.Except(walkable.ForbiddenMovementDirections).ToList();
+
+            if (State != GhostState.LOCKED && State != GhostState.UNLOCKED)
+            {
                 p.Remove(-LastMoveDirection);
+
+                var door = CurrentTile.DirectionNeighbor.Where(x => x.Value is DoorBoardTile)?.Select(x => x.Value)?.ToList();
+                if (door != null)
+                    door.ForEach(x => p.Remove(-((DoorBoardTile)x).OutDirection));
+            }
 
             //If there are no options, the ghost is in the edge of the screen, so we force to walk towards the
             //void, so he can teleport to the other side of the board.
@@ -141,7 +150,10 @@ namespace PacEngine.characters.ghosts
             if (State == GhostState.EATEN && tile.Position.Compare(Board.PositionInsideOfPrision))
                 Revive();
             else if (State == GhostState.UNLOCKED && tile.Position.Compare(Board.PositionInFrontOfPrision))
+            {
+                UnityEngine.Debug.LogWarning("ARRIVING IN FRONT OF THE PRISION IN STATE UNLOCKED");
                 ChangeState(GhostState.CHASE);
+            }
         }
 
         protected override bool IsDoorWalkable()

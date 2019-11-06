@@ -22,5 +22,12 @@ namespace PacEngine.characters.ghosts
                 toAdd += Vector.LEFT * PACMAN_HEADING_MULTIPLER;
             return Board.ToBounds(PacmanEngine.Instance.Pacman.Position + toAdd);
         }
+
+        internal override void Start(Vector position)
+        {
+            ChangeState(GhostState.LOCKED);
+
+            base.Start(position);
+        }
     }
 }

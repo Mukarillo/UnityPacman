@@ -23,5 +23,12 @@ namespace PacEngine.characters.ghosts
 
             return target;
         }
+
+        internal override void Start(Vector position)
+        {
+            ChangeState(GhostState.LOCKED);
+
+            base.Start(position);
+        }
     }
 }

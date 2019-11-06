@@ -18,5 +18,12 @@ namespace PacEngine.characters.ghosts
             var chase = (PacmanEngine.Instance.Pacman.Position - Position).Magnitude > MIN_DIST_TO_CHASE;
             return chase ? PacmanEngine.Instance.Pacman.Position : ScatterPosition;
         }
+
+        internal override void Start(Vector position)
+        {
+            ChangeState(GhostState.LOCKED);
+
+            base.Start(position);
+        }
     }
 }

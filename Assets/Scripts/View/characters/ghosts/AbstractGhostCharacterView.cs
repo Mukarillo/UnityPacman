@@ -26,7 +26,7 @@ public abstract class AbstractGhostCharacterView : AbstractCharacterView
 
     private void ChangeState(AbstractGhostCharacter.GhostState state)
     {
-        //positionOffset = Vector2.zero;
+        positionOffset = Vector2.zero;
         animator.SetBool(ANIMATOR_ALMOST_DONE_FRIGHTENED, false);
 
         switch (state)
@@ -44,6 +44,10 @@ public abstract class AbstractGhostCharacterView : AbstractCharacterView
             case AbstractGhostCharacter.GhostState.CHASE:
             case AbstractGhostCharacter.GhostState.SCATTER:
                 animator.SetBool(ANIMATOR_EATEN, false);
+                break;
+            case AbstractGhostCharacter.GhostState.LOCKED:
+            case AbstractGhostCharacter.GhostState.UNLOCKED:
+                positionOffset = positionOffset = new Vector2(0.5f, 0f);
                 break;
         }
     }

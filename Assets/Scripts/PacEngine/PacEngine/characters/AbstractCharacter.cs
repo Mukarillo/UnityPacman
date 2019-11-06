@@ -46,10 +46,8 @@ namespace PacEngine.characters
             Position += direction;
             if(Board.TryGetTileAt(Position, out var tile))
             {
-                UnityEngine.Debug.LogWarning((tile is DoorBoardTile) + " " + IsDoorWalkable());
                 if (tile is BlockerBoardTile && !(tile is DoorBoardTile && IsDoorWalkable()))
                 {
-                    UnityEngine.Debug.LogWarning("ENTREI");
                     Position -= direction;
                     return false;
                 }
@@ -77,7 +75,7 @@ namespace PacEngine.characters
             DoDecision();
         }
 
-        internal void Start(Vector position)
+        internal virtual void Start(Vector position)
         {
             Teleport(position);
             ToggleActive(true);
@@ -85,7 +83,7 @@ namespace PacEngine.characters
 
             DoDecision();
         }
-        internal void Stop() => ToggleActive(false);
+        internal virtual void Stop() => ToggleActive(false);
 
         protected virtual void ToggleActive(bool active)
         {

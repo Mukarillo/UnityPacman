@@ -12,6 +12,7 @@ namespace PacEngine
     public class PacmanEngine
     {
         private float TIME_TO_RESET = 3f;
+        private float TIME_TO_RELEASE_GHOSTS = 2f;
 
         private static PacmanEngine instance;
         public static PacmanEngine Instance => instance ?? (instance = new PacmanEngine());
@@ -47,10 +48,10 @@ namespace PacEngine
 
             Board = new Board(boardTiles, positionInFrontOfPrision, positionInsideOfPrision);
             Pacman = new Pacman(pacmanPosition, Board);
-            //Blinky = new Blinky(positionInFrontOfPrision, Board);
+            Blinky = new Blinky(positionInFrontOfPrision, Board);
             Pinky = new Pinky(positionInsideOfPrision, Board);
-            //Inky = new Inky((positionInsideOfPrision + (Vector.LEFT * 2)), Board);
-            //Clyde = new Clyde((positionInsideOfPrision + (Vector.RIGHT * 2)), Board);
+            Inky = new Inky((positionInsideOfPrision + (Vector.LEFT * 2)), Board);
+            Clyde = new Clyde((positionInsideOfPrision + (Vector.RIGHT * 2)), Board);
         }
 
         public void InitiateGame()
@@ -58,15 +59,19 @@ namespace PacEngine
             GameOver = false;
             Pacman.Start(pacmanPosition);
 
-            //Blinky.Start(positionInFrontOfPrision);
+            Blinky.Start(positionInFrontOfPrision);
             Pinky.Start(positionInsideOfPrision);
-            //Inky.Start(positionInsideOfPrision + Vector.LEFT * 2);
-            //Clyde.Start(positionInsideOfPrision + Vector.RIGHT * 2);
+            Inky.Start(positionInsideOfPrision + Vector.LEFT * 2);
+            Clyde.Start(positionInsideOfPrision + Vector.RIGHT * 2);
+
+            WaitAndCall((int)TIME_TO_RELEASE_GHOSTS * 1000, Pinky.Unlock);
+            WaitAndCall((int)TIME_TO_RELEASE_GHOSTS * 1000 * 2, Inky.Unlock);
+            WaitAndCall((int)TIME_TO_RELEASE_GHOSTS * 1000 * 3, Clyde.Unlock);
         }
 
         internal void CheckCollision()
         {
-            //Ghosts.ForEach(CheckGhostCollision);
+            Ghosts.ForEach(CheckGhostCollision);
         }
 
         private void CheckGhostCollision(AbstractGhostCharacter ghost)
