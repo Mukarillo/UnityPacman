@@ -1,5 +1,6 @@
 ﻿using PacEngine.characters;
 using DG.Tweening;
+using PacEngine;
 
 public class PacmanView : AbstractCharacterView
 {
@@ -11,7 +12,7 @@ public class PacmanView : AbstractCharacterView
     public override void LinkEngineCharacter(AbstractCharacter engineCharacter)
     {
         base.LinkEngineCharacter(engineCharacter);
-        EnginePacmanCharacter.OnDie += Die;
+        PacmanEngine.OnDie += Die;
     }
 
     protected override void ToggleVisibility(bool active)

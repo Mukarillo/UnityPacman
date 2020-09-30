@@ -7,8 +7,6 @@ namespace PacEngine.characters
 {
     public class Pacman : AbstractCharacter
     {
-        public Action OnDie;
-
         private Vector? nextDirection = null;
         private bool waitToMove;
 
@@ -55,11 +53,6 @@ namespace PacEngine.characters
 
             LastMoveDirection = nextDirection.Value;
             nextDirection = null;
-        }
-
-        internal void Die()
-        {
-            OnDie?.Invoke();
         }
 
         protected override bool IsDoorWalkable() => false;

@@ -14,6 +14,10 @@ namespace PacEngine
         private float TIME_TO_RESET = 3f;
         private float TIME_TO_RELEASE_GHOSTS = 2f;
 
+        public delegate void EngineEvent();
+        public static event EngineEvent OnDie;
+        public static event EngineEvent OnGameOver;
+
         private static PacmanEngine instance;
         public static PacmanEngine Instance => instance ?? (instance = new PacmanEngine());
 
@@ -26,7 +30,9 @@ namespace PacEngine
         public Inky Inky { get; private set; }
         public Clyde Clyde { get; private set; }
 
+        public int LifeCount { get; private set; } = 3;
         public bool GameOver { get; private set; }
+        private bool processColision;
 
         public List<AbstractGhostCharacter> Ghosts => new List<AbstractGhostCharacter>
         {
@@ -56,6 +62,7 @@ namespace PacEngine
 
         public void InitiateGame()
         {
+            processColision = false;
             GameOver = false;
             Pacman.Start(pacmanPosition);
 
@@ -93,18 +100,27 @@ namespace PacEngine
 
         private void EndGame()
         {
-            if (GameOver)
+            if (GameOver || processColision)
                 return;
-
-            GameOver = true;
-            UnityEngine.Debug.LogWarning("GAME OVER");
 
             Pacman.Stop();
             Ghosts.ForEach(x => x.Stop());
 
-            Pacman.Die();
+            if (LifeCount > 0)
+            {
+                LifeCount--;
+                WaitAndCall(((int)TIME_TO_RESET * 1000), InitiateGame);
+            }
+            else
+            {
+                OnGameOver?.Invoke();
+                GameOver = true;
+                UnityEngine.Debug.LogWarning("GAME OVER");
+            }
 
-            WaitAndCall(((int)TIME_TO_RESET * 1000), InitiateGame);
+            OnDie?.Invoke();
+
+            processColision = true;
         }
 
         private async Task WaitAndCall(int time, Action callback)
