@@ -12,7 +12,11 @@ public class PacmanViewController : MonoBehaviour
         { KeyCode.W, Vector.UP },
         { KeyCode.A, Vector.LEFT },
         { KeyCode.S, Vector.DOWN },
-        { KeyCode.D, Vector.RIGHT }
+        { KeyCode.D, Vector.RIGHT },
+        { KeyCode.UpArrow, Vector.UP },
+        { KeyCode.LeftArrow, Vector.LEFT },
+        { KeyCode.DownArrow, Vector.DOWN },
+        { KeyCode.RightArrow, Vector.RIGHT }
     };
         
     public BoardView boardView;
