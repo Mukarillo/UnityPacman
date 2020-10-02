@@ -17,6 +17,8 @@ namespace PacEngine
         public delegate void EngineEvent();
         public static event EngineEvent OnDie;
         public static event EngineEvent OnGameOver;
+        public static event EngineEvent OnEnableSpeedMode;
+        public static event EngineEvent OnDisableSpeedMode;
 
         private static PacmanEngine instance;
         public static PacmanEngine Instance => instance ?? (instance = new PacmanEngine());
@@ -127,6 +129,16 @@ namespace PacEngine
         {
             await Task.Delay(time);
             callback.Invoke();
+        }
+
+        public void EnableSpeedMode()
+        {
+            OnEnableSpeedMode?.Invoke();
+        }
+
+        public void DisableSpeedMode()
+        {
+            OnDisableSpeedMode?.Invoke();
         }
     }
 }

@@ -111,6 +111,16 @@ public class PacmanViewController : MonoBehaviour
                 break;
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            PacmanEngine.Instance.EnableSpeedMode();
+        }
+
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            PacmanEngine.Instance.DisableSpeedMode();
+        }
     }
 
     private static TileInfo GetInfo(int id, int prize = 0, List<Vector> forbiddenMovement = null, Vector? doorOutDirection = null)
