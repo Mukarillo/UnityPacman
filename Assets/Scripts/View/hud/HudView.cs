@@ -4,9 +4,9 @@ using UnityEngine.UI;
 
 public class HudView : MonoBehaviour
 {
-    [SerializeField] public Image lifeIconRef;
-    [SerializeField] public Transform lifeCountContainer;
-    [SerializeField] public Text gameOverLabel;
+    [SerializeField] private Image lifeIconRef;
+    [SerializeField] private Transform lifeCountContainer;
+    [SerializeField] private Text gameOverLabel;
 
     void Awake()
     {

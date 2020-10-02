@@ -22,7 +22,9 @@ namespace PacEngine.characters
         protected Vector LastMoveDirection { get; set; }
 
         public float TimeToTravelOneTile => BaseTimeToTravelOneTile / SpeedMultiplier;
-        protected virtual float SpeedMultiplier { get; } = 1f;
+
+        protected virtual float SpeedMultiplier => PacmanEngine.Instance.TurboMode ? 2f : 1f;
+
         protected float BaseTimeToTravelOneTile => 1f / 11f;
 
         protected abstract void DoDecision();

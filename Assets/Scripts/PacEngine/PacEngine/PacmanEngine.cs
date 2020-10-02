@@ -33,6 +33,7 @@ namespace PacEngine
         public Clyde Clyde { get; private set; }
 
         public int LifeCount { get; private set; } = 3;
+        public bool TurboMode { get; private set; } = false;
         public bool GameOver { get; private set; }
         private bool processColision;
 
@@ -133,11 +134,13 @@ namespace PacEngine
 
         public void EnableSpeedMode()
         {
+            TurboMode = true;
             OnEnableSpeedMode?.Invoke();
         }
 
         public void DisableSpeedMode()
         {
+            TurboMode = false;
             OnDisableSpeedMode?.Invoke();
         }
     }

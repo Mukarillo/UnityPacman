@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60ae53c9674dc4b308ae939dbeeac194, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteSkin: {fileID: 4941868369138875847}
 --- !u!95 &4941868369138875845
 Animator:
   serializedVersion: 3
