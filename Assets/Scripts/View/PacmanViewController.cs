@@ -12,7 +12,11 @@ public class PacmanViewController : MonoBehaviour
         { KeyCode.W, Vector.UP },
         { KeyCode.A, Vector.LEFT },
         { KeyCode.S, Vector.DOWN },
-        { KeyCode.D, Vector.RIGHT }
+        { KeyCode.D, Vector.RIGHT },
+        { KeyCode.UpArrow, Vector.UP },
+        { KeyCode.LeftArrow, Vector.LEFT },
+        { KeyCode.DownArrow, Vector.DOWN },
+        { KeyCode.RightArrow, Vector.RIGHT }
     };
         
     public BoardView boardView;
@@ -106,6 +110,16 @@ public class PacmanViewController : MonoBehaviour
                 PacmanEngine.Instance.Pacman.ChangeHeadingDirection(kvp.Value);
                 break;
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            PacmanEngine.Instance.EnableSpeedMode();
+        }
+
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            PacmanEngine.Instance.DisableSpeedMode();
         }
     }
 

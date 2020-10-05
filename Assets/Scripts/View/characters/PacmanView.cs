@@ -1,5 +1,7 @@
 ﻿using PacEngine.characters;
 using DG.Tweening;
+using PacEngine;
+using UnityEngine;
 
 public class PacmanView : AbstractCharacterView
 {
@@ -8,10 +10,18 @@ public class PacmanView : AbstractCharacterView
 
     private Pacman EnginePacmanCharacter => (Pacman)EngineCharacter;
 
+    [SerializeField] private SpriteRenderer spriteSkin;
     public override void LinkEngineCharacter(AbstractCharacter engineCharacter)
     {
         base.LinkEngineCharacter(engineCharacter);
-        EnginePacmanCharacter.OnDie += Die;
+        PacmanEngine.OnDie += Die;
+        PacmanEngine.OnEnableSpeedMode += ChangeSkin;
+        PacmanEngine.OnDisableSpeedMode += ChangeSkin;
+    }
+
+    public void ChangeSkin()
+    {
+        spriteSkin.color = PacmanEngine.Instance.TurboMode ? Color.red : Color.white;
     }
 
     protected override void ToggleVisibility(bool active)
