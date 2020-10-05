@@ -17,8 +17,6 @@ public abstract class AbstractGhostCharacterView : AbstractCharacterView
 
     public override void LinkEngineCharacter(AbstractCharacter engineCharacter)
     {
-        positionOffset = new Vector2(0.5f, 0f);
-
         base.LinkEngineCharacter(engineCharacter);
 
         EngineGhostCharacter.OnChangeState += ChangeState;
