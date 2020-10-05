@@ -46,6 +46,7 @@ public abstract class AbstractGhostCharacterView : AbstractCharacterView
             case AbstractGhostCharacter.GhostState.LOCKED:
             case AbstractGhostCharacter.GhostState.UNLOCKED:
                 positionOffset = positionOffset = new Vector2(0.5f, 0f);
+                animator.SetBool(ANIMATOR_EATEN, false);
                 break;
         }
     }

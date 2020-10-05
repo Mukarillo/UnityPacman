@@ -8,6 +8,7 @@ namespace PacEngine.board.tiles
         public DoorBoardTile(Vector outDirection, Vector position) : base(position)
         {
             OutDirection = outDirection;
+            allowDoorMovement = false;
         }
     }
 }
