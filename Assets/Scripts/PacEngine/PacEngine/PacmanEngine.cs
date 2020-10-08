@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Assets.Scripts.PacEngine.PacEngine.item;
 using PacEngine.board;
 using PacEngine.board.tiles;
 using PacEngine.characters;
@@ -13,12 +14,14 @@ namespace PacEngine
     {
         private float TIME_TO_RESET = 3f;
         private float TIME_TO_RELEASE_GHOSTS = 2f;
+        private float TIME_TO_DROP_XP_ITEM = 5f;
 
         public delegate void EngineEvent();
         public static event EngineEvent OnDie;
         public static event EngineEvent OnGameOver;
         public static event EngineEvent OnEnableSpeedMode;
         public static event EngineEvent OnDisableSpeedMode;
+        public static event EngineEvent OnDropItem;
 
         private static PacmanEngine instance;
         public static PacmanEngine Instance => instance ?? (instance = new PacmanEngine());
@@ -31,11 +34,12 @@ namespace PacEngine
         public Pinky Pinky { get; private set; }
         public Inky Inky { get; private set; }
         public Clyde Clyde { get; private set; }
-
         public int LifeCount { get; private set; } = 3;
         public bool TurboMode { get; private set; } = false;
         public bool GameOver { get; private set; }
         private bool processColision;
+
+        public XpItem XpItem { get; private set; }
 
         public List<AbstractGhostCharacter> Ghosts => new List<AbstractGhostCharacter>
         {
@@ -61,6 +65,8 @@ namespace PacEngine
             Pinky = new Pinky(positionInsideOfPrision, Board);
             Inky = new Inky((positionInsideOfPrision + (Vector.LEFT * 2)), Board);
             Clyde = new Clyde((positionInsideOfPrision + (Vector.RIGHT * 2)), Board);
+            XpItem = new XpItem(positionInFrontOfPrision, Board);
+            
         }
 
         public void InitiateGame()
@@ -73,15 +79,37 @@ namespace PacEngine
             Pinky.Start(positionInsideOfPrision);
             Inky.Start(positionInsideOfPrision + Vector.LEFT * 2);
             Clyde.Start(positionInsideOfPrision + Vector.RIGHT * 2);
+           
 
             WaitAndCall((int)TIME_TO_RELEASE_GHOSTS * 1000, Pinky.Unlock);
             WaitAndCall((int)TIME_TO_RELEASE_GHOSTS * 1000 * 2, Inky.Unlock);
             WaitAndCall((int)TIME_TO_RELEASE_GHOSTS * 1000 * 3, Clyde.Unlock);
+
+
+            WaitAndCall((int)TIME_TO_DROP_XP_ITEM * 1000, DropXpItem);
+        }
+
+        private void DropXpItem()
+        {
+            UnityEngine.Debug.LogWarning("[Engine] Drop XP Item");
+            XpItem.Start(positionInFrontOfPrision);
+            OnDropItem?.Invoke();
         }
 
         internal void CheckCollision()
         {
             Ghosts.ForEach(CheckGhostCollision);
+            CheckItemCollision();
+        }
+
+        private void CheckItemCollision()
+        {
+            if (XpItem == null) return;
+
+            if (Pacman.Position.Equals(XpItem.Position))
+            {
+                //collect xp item 
+            }
         }
 
         private void CheckGhostCollision(AbstractGhostCharacter ghost)

@@ -13,7 +13,7 @@ public abstract class AbstractCharacterView : MonoBehaviour
     protected Vector2 positionOffset = Vector2.zero;
     protected Tween moveTween;
     protected Animator animator;
-    private float animatorSpeed;
+    protected float animatorSpeed;
 
     protected virtual void Awake()
     {
