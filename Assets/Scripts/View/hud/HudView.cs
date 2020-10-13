@@ -1,6 +1,7 @@
 ﻿using PacEngine;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HudView : MonoBehaviour
 {
@@ -44,7 +45,8 @@ public class HudView : MonoBehaviour
     private void FinishGame()
     {
         ClearLifeCount();
-        gameOverLabel.gameObject.SetActive(true);
+        //gameOverLabel.gameObject.SetActive(true);
+        SceneManager.LoadScene("Title");
     }
 
 }
