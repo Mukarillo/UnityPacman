@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using PacEngine.board;
 using PacEngine.board.tiles;
 using PacEngine.utils;
@@ -55,6 +56,8 @@ namespace PacEngine.characters
             nextDirection = null;
         }
 
+        protected override List<Vector> GetAvailableDirectionsAtCurrentTile() => null;
+        
         protected override bool IsDoorWalkable() => false;
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using PacEngine.board;
 using PacEngine.board.tiles;
 using PacEngine.utils;
@@ -66,6 +67,8 @@ namespace PacEngine.characters
             return false;
         }
 
+        protected abstract List<Vector> GetAvailableDirectionsAtCurrentTile();
+       
         protected abstract bool IsDoorWalkable();
 
         public void DoneViewMove()

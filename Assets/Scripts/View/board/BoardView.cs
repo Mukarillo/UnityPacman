@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using Assets.Scripts.PacEngine.PacEngine.item;
+using Assets.Scripts.View.characters.items;
+using PacEngine;
 using PacEngine.board.prizes;
 using PacEngine.board.tiles;
 using PacEngine.utils;
@@ -29,19 +32,25 @@ public class BoardView : MonoBehaviour
     [SerializeField] private ClydeView clyde;
     public ClydeView Clyde => clyde;
 
+    [SerializeField] private XpItemView xpItem;
+
+    public XpItemView XpItem => xpItem;
+
+
     private List<PrizeView> prizes = new List<PrizeView>();
+
 
     public void CreateDotsAndPellets(AbstractBoardTile[][] board)
     {
-        for(int i = 0; i < board.Length; i++)
+        foreach (var t in board)
         {
-            for (int j = 0; j < board[i].Length; j++)
+            foreach (var t1 in t)
             {
-                var consumable = GetViewPrizeInTile(board[i][j]);
+                var consumable = GetViewPrizeInTile(t1);
                 if (consumable == null) continue;
                 prizes.Add(new PrizeView(consumable.Item2, consumable.Item1, this));
 
-                PaintTileOnBoard(board[i][j].Position, consumable.Item1);
+                PaintTileOnBoard(t1.Position, consumable.Item1);
             }
         }
     }

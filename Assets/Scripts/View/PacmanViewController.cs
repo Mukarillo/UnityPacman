@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Assets.Scripts.PacEngine.PacEngine.item;
 using PacEngine;
 using PacEngine.board.prizes;
 using PacEngine.board.tiles;
@@ -74,11 +75,14 @@ public class PacmanViewController : MonoBehaviour
         boardView.Pinky.LinkEngineCharacter(PacmanEngine.Instance.Pinky);
         boardView.Inky.LinkEngineCharacter(PacmanEngine.Instance.Inky);
         boardView.Clyde.LinkEngineCharacter(PacmanEngine.Instance.Clyde);
+        boardView.XpItem.LinkEngineCharacter(PacmanEngine.Instance.XpItem);
 
         boardView.CreateDotsAndPellets(PacmanEngine.Instance.Board.Tiles);
 
         PacmanEngine.Instance.InitiateGame();
+       
     }
+
 
     void Update()
     {
