@@ -9,12 +9,14 @@ namespace PacEngine.board.tiles
         public Dictionary<Vector, AbstractBoardTile> DirectionNeighbor { get; private set; } = new Dictionary<Vector, AbstractBoardTile>();
         public List<Vector> AvailableDirectionsToWalk { get; private set; } = new List<Vector>();
 
+        protected bool allowDoorMovement = true;
+
         protected AbstractBoardTile(Vector position)
         {
             Position = position;
         }
 
-        public void ResolveNeighbors(Board board)
+        public virtual void ResolveNeighbors(Board board)
         {
             var possibilities = Vector.ALL_DIRECTIONS;
 
@@ -25,7 +27,7 @@ namespace PacEngine.board.tiles
                 if (board.TryGetTileAt(neighborPosition, out var element))
                     DirectionNeighbor.Add(direction, element);
 
-                if (element is WalkableBoardTile || element is DoorBoardTile)
+                if (element is WalkableBoardTile || (element is DoorBoardTile && allowDoorMovement))
                     AvailableDirectionsToWalk.Add(direction);
             }
         }

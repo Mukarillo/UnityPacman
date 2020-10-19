@@ -1,4 +1,3 @@
-﻿using System.Collections.Generic;
 using PacEngine.board;
 using PacEngine.board.tiles;
 using PacEngine.utils;
@@ -116,7 +115,7 @@ namespace PacEngine.characters.ghosts
             Move(direction);
         }
 
-        protected override List<Vector> GetAvailableDirectionsAtCurrentTile()
+        protected List<Vector> GetAvailableDirectionsAtCurrentTile()
         {
             if (CurrentTile.AvailableDirectionsToWalk?.Count == 0)
                 return new List<Vector>();
@@ -124,14 +123,18 @@ namespace PacEngine.characters.ghosts
             var p = CurrentTile.AvailableDirectionsToWalk;
             if (CurrentTile is WalkableBoardTile walkable)
                 p = p.Except(walkable.ForbiddenMovementDirections).ToList();
+            if(CurrentTile is DoorBoardTile)
+                p.Remove(-LastMoveDirection);
 
             if (State != GhostState.LOCKED && State != GhostState.UNLOCKED)
             {
                 p.Remove(-LastMoveDirection);
 
                 var door = CurrentTile.DirectionNeighbor.Where(x => x.Value is DoorBoardTile)?.Select(x => x.Value)?.ToList();
-                if (door != null)
-                    door.ForEach(x => p.Remove(-((DoorBoardTile)x).OutDirection));
+                if (door != null && State != GhostState.EATEN)
+                {
+                    door.ForEach(x => p.Remove(-((DoorBoardTile) x).OutDirection));
+                }
             }
 
             //If there are no options, the ghost is in the edge of the screen, so we force to walk towards the
