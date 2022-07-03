@@ -115,7 +115,7 @@ namespace PacEngine.characters.ghosts
             Move(direction);
         }
 
-        protected List<Vector> GetAvailableDirectionsAtCurrentTile()
+        protected override List<Vector> GetAvailableDirectionsAtCurrentTile()
         {
             if (CurrentTile.AvailableDirectionsToWalk?.Count == 0)
                 return new List<Vector>();
